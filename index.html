@@ -64,14 +64,15 @@
       background-repeat: no-repeat, no-repeat, no-repeat, repeat;
       background-size: auto, auto, auto, 36px 36px;
     }
-    .hero-pattern-overlay {
+    .hero-pattern {
+      background-color: #faf7f2;
       background-image:
-        linear-gradient(to right, rgba(63, 29, 99, 0.95), rgba(63, 29, 99, 0.85) 45%, rgba(63, 29, 99, 0.5)),
-        radial-gradient(circle at 6% 88%, rgba(200, 114, 10, 0.4), transparent 32%),
-        radial-gradient(circle at 96% 8%, rgba(139, 92, 246, 0.4), transparent 30%),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36'%3E%3Ccircle cx='2' cy='2' r='1.5' fill='white' fill-opacity='0.12'/%3E%3C/svg%3E");
+        radial-gradient(circle at 6% 10%, rgba(200, 114, 10, 0.18), transparent 32%),
+        radial-gradient(circle at 94% 20%, rgba(63, 29, 99, 0.16), transparent 32%),
+        radial-gradient(circle at 50% 105%, rgba(139, 92, 246, 0.14), transparent 45%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36'%3E%3Ccircle cx='2' cy='2' r='1.5' fill='%233f1d63' fill-opacity='0.10'/%3E%3C/svg%3E");
       background-repeat: no-repeat, no-repeat, no-repeat, repeat;
-      background-size: cover, auto, auto, 36px 36px;
+      background-size: auto, auto, auto, 36px 36px;
     }
   </style>
 </head>
@@ -205,28 +206,28 @@
 </div>
 <!-- END: Mobile Menu Drawer -->
 <!-- BEGIN: Hero Section -->
-<header class="pt-16 pb-24 relative overflow-hidden bg-cover bg-center" id="home" style="background-image: url('img/whychooseus/hero.jpeg');">
-<div class="absolute inset-0 hero-pattern-overlay"></div>
+<header class="pt-16 pb-24 relative overflow-hidden hero-pattern" id="home">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<img alt="Vyaptum Advisory Hero" class="w-full rounded-2xl shadow-xl mb-12" src="img/whychooseus/hero.jpeg"/>
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 <!-- Hero Content -->
 <div>
-<h1 class="text-4xl sm:text-5xl font-extrabold text-white leading-tight">
+<h1 class="text-4xl sm:text-5xl font-extrabold text-brand-navy leading-tight">
               Private Limited Company Registration
             </h1>
-<p class="mt-4 text-xl text-white/90 font-medium">
-              Get your Private Limited Company Registration in just <span class="text-white font-bold">7 days</span> at <span class="text-brand-orange font-bold">Rs.1,999/-</span> only.
+<p class="mt-4 text-xl text-gray-700 font-medium">
+              Get your Private Limited Company Registration in just <span class="text-brand-navy font-bold">7 days</span> at <span class="text-brand-orange font-bold">Rs.1,999/-</span> only.
             </p>
 <ul class="mt-6 space-y-3">
-<li class="flex items-center text-white/90">
+<li class="flex items-center text-gray-700">
 <svg class="h-6 w-6 text-brand-orange mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
                 2 DIN and DSC for two Directors
               </li>
-<li class="flex items-center text-white/90">
+<li class="flex items-center text-gray-700">
 <svg class="h-6 w-6 text-brand-orange mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
                 Drafting of MoA &amp; AoA
               </li>
-<li class="flex items-center text-white/90">
+<li class="flex items-center text-gray-700">
 <svg class="h-6 w-6 text-brand-orange mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
                 Registration fees and stamp duty
               </li>
