@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Financial Calculators - Vyaptum Advisory</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#3f1d63',
+              orange: '#c8720a',
+              orangeDark: '#a85f08',
+              light: '#faf7f2',
+              surface: '#ffffff'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Fraunces', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style data-purpose="custom-utilities">
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf7f2;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Fraunces', serif;
+    }
+    select option {
+      color: #111827;
+      background-color: #ffffff;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    [id] {
+      scroll-margin-top: 96px;
+    }
+  </style>
+</head>
+<body class="antialiased text-gray-800">
+<!-- BEGIN: Navigation -->
+<nav class="bg-white shadow-sm sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-20">
+<div class="flex items-center">
+<a class="flex-shrink-0 flex items-center" href="index.html#home">
+<img alt="Vyaptum Advisory" class="h-9 w-auto" src="img/brand/logo.jpeg"/>
+</a>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-gray-600 hover:text-brand-navy font-medium" href="service.html?name=Private%20Limited%20Company%20Registration&amp;category=Registrations">Services</a>
+<a class="text-gray-600 hover:text-brand-navy font-medium" href="service.html?name=ROC%20Compliance&amp;category=Compliance">Compliance</a>
+<a class="text-gray-600 hover:text-brand-navy font-medium" href="service.html?name=GST%20Return&amp;category=Compliance">Tax</a>
+<a class="text-gray-600 hover:text-brand-navy font-medium" href="index.html#about">About</a>
+<a class="text-gray-600 hover:text-brand-navy font-medium" href="index.html#contact">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<a class="hidden md:inline-block bg-brand-orange text-white px-6 py-2 rounded-md font-semibold hover:bg-brand-orangeDark transition duration-300" href="index.html#contact">Start Now</a>
+<button aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu" class="md:hidden flex items-center justify-center w-10 h-10 text-brand-navy" id="mobileMenuBtn" type="button">
+<svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<!-- END: Navigation -->
+<!-- BEGIN: Mobile Menu Drawer -->
+<div class="fixed inset-0 bg-black/40 z-[60] hidden" id="mobileMenuOverlay"></div>
+<div aria-hidden="true" class="fixed inset-y-0 right-0 w-full max-w-sm bg-white z-[70] translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto" id="mobileMenu">
+<div class="flex justify-end items-center px-4 h-16 border-b border-gray-100">
+<button aria-label="Close menu" class="flex items-center justify-center w-10 h-10 text-brand-navy" id="mobileMenuClose" type="button">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+</div>
+<div class="px-2">
+<!-- Registrations -->
+<div class="border-b border-gray-100">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+            Registrations
+            <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<div class="hidden mobile-accordion-panel px-3 pb-4 space-y-3">
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Private%20Limited%20Company&amp;category=Registrations">Private Limited Company</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Public%20Limited%20Company&amp;category=Registrations">Public Limited Company</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Partnership&amp;category=Registrations">Partnership</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=One%20Person%20Company&amp;category=Registrations">One Person Company</a>
+</div>
+</div>
+<!-- Compliance -->
+<div class="border-b border-gray-100">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+            Compliance
+            <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<div class="hidden mobile-accordion-panel px-3 pb-4 space-y-3">
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Annual%20Filing&amp;category=Compliance">Annual Filing</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=GST%20Return&amp;category=Compliance">GST Return</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Income%20Tax%20Return&amp;category=Compliance">Income Tax Return</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=ROC%20Compliance&amp;category=Compliance">ROC Compliance</a>
+</div>
+</div>
+<!-- IPR -->
+<div class="border-b border-gray-100">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+            IPR
+            <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<div class="hidden mobile-accordion-panel px-3 pb-4 space-y-3">
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Trademark%20Registration&amp;category=IPR">Trademark Registration</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Patent%20Registration&amp;category=IPR">Patent Registration</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Copyright%20Registration&amp;category=IPR">Copyright Registration</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Design%20Registration&amp;category=IPR">Design Registration</a>
+</div>
+</div>
+<!-- Lawyer Services -->
+<div class="border-b border-gray-100">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+            Lawyer Services
+            <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<div class="hidden mobile-accordion-panel px-3 pb-4 space-y-3">
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Talk%20to%20a%20Lawyer&amp;category=Lawyer%20Services">Talk to a Lawyer</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Legal%20Notice&amp;category=Lawyer%20Services">Legal Notice</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Contract%20Drafting&amp;category=Lawyer%20Services">Contract Drafting</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Legal%20Documentation&amp;category=Lawyer%20Services">Legal Documentation</a>
+</div>
+</div>
+<!-- Calculators -->
+<div class="border-b border-gray-100">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+            Calculators
+            <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<div class="hidden mobile-accordion-panel px-3 pb-4 space-y-3">
+<a class="block text-gray-600 hover:text-brand-orange" href="calculator.html?type=gst">GST Calculator</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="calculator.html?type=income-tax">Income Tax Calculator</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="calculator.html?type=sip">SIP Calculator</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="calculator.html?type=tds">TDS Calculator</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="calculator.html?type=business-loan-emi">Business Loan EMI</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="calculator.html?type=personal-loan-emi">Personal Loan EMI</a>
+</div>
+</div>
+<!-- Taxation -->
+<a class="block py-5 px-3 font-bold text-brand-navy border-b border-gray-100" href="service.html?name=GST%20Return&amp;category=Compliance">Taxation</a>
+<!-- Consultation -->
+<a class="block py-5 px-3 font-bold text-brand-navy border-b border-gray-100" href="index.html#contact">Consultation</a>
+<!-- More -->
+<div class="border-b border-gray-100">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+            More
+            <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<div class="hidden mobile-accordion-panel px-3 pb-4 space-y-3">
+<a class="block text-gray-600 hover:text-brand-orange" href="index.html#home">Home</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="index.html#about">About</a>
+</div>
+</div>
+<!-- Contact Us -->
+<a class="block py-5 px-3 font-bold text-brand-navy border-b border-gray-100" href="https://wa.me/919204387707?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services." rel="noopener" target="_blank">Contact Us</a>
+</div>
+<div class="p-4">
+<a class="w-full flex items-center justify-center gap-2 bg-brand-orange text-white font-semibold py-4 rounded-full hover:bg-brand-orangeDark transition duration-300" href="https://wa.me/919204387707?text=Hi%2C%20I%27d%20like%20to%20talk%20to%20an%20expert." rel="noopener" target="_blank">
+<svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C10 9.4 9.5 8 9.3 7.6c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"></path><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.4C8.4 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.7 0-3.3-.5-4.6-1.3l-.3-.2-3.3.9.9-3.2-.2-.3C3.5 14.5 3 13 3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9z"></path></svg>
+          Talk to Experts
+        </a>
+</div>
+</div>
+<!-- END: Mobile Menu Drawer -->
+
+<!-- BEGIN: Page Header -->
+<header class="pt-14 pb-10 bg-white border-b border-gray-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h1 class="text-3xl md:text-4xl font-extrabold text-brand-navy"><span class="text-brand-orange">Financial</span> Calculators</h1>
+<p class="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">Quick, free estimates for GST, SIP and loan EMIs &mdash; for an accurate, personalised number talk to our experts.</p>
+</div>
+</header>
+<!-- END: Page Header -->
+
+<!-- BEGIN: Calculators Section -->
+<section class="py-14">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+<!-- Sidebar -->
+<nav class="lg:col-span-1">
+<ul class="flex lg:flex-col overflow-x-auto lg:overflow-visible gap-2 pb-2 lg:pb-0" id="calcSidebar">
+<li><a class="calc-nav-link whitespace-nowrap block px-4 py-3 rounded-lg font-semibold text-gray-600 hover:bg-gray-50" data-type="gst" href="calculator.html?type=gst">GST Calculator</a></li>
+<li><a class="calc-nav-link whitespace-nowrap block px-4 py-3 rounded-lg font-semibold text-gray-600 hover:bg-gray-50" data-type="income-tax" href="calculator.html?type=income-tax">Income Tax Calculator</a></li>
+<li><a class="calc-nav-link whitespace-nowrap block px-4 py-3 rounded-lg font-semibold text-gray-600 hover:bg-gray-50" data-type="sip" href="calculator.html?type=sip">SIP Calculator</a></li>
+<li><a class="calc-nav-link whitespace-nowrap block px-4 py-3 rounded-lg font-semibold text-gray-600 hover:bg-gray-50" data-type="tds" href="calculator.html?type=tds">TDS Calculator</a></li>
+<li><a class="calc-nav-link whitespace-nowrap block px-4 py-3 rounded-lg font-semibold text-gray-600 hover:bg-gray-50" data-type="business-loan-emi" href="calculator.html?type=business-loan-emi">Business Loan EMI</a></li>
+<li><a class="calc-nav-link whitespace-nowrap block px-4 py-3 rounded-lg font-semibold text-gray-600 hover:bg-gray-50" data-type="personal-loan-emi" href="calculator.html?type=personal-loan-emi">Personal Loan EMI</a></li>
+</ul>
+</nav>
+
+<!-- Panels -->
+<div class="lg:col-span-3">
+
+<!-- GST Calculator -->
+<div class="calc-panel hidden bg-white rounded-2xl shadow-sm border border-gray-100 p-8" data-panel="gst">
+<h2 class="text-2xl font-bold text-brand-navy mb-1">GST Calculator</h2>
+<p class="text-gray-500 mb-6">Add or remove GST from an amount instantly.</p>
+<div class="flex gap-3 mb-6">
+<button class="gst-mode-btn flex-1 py-3 rounded-lg font-semibold border-2 border-brand-navy bg-brand-navy text-white" data-mode="add" type="button">Add GST</button>
+<button class="gst-mode-btn flex-1 py-3 rounded-lg font-semibold border-2 border-gray-200 text-gray-600" data-mode="remove" type="button">Remove GST</button>
+</div>
+<div class="grid sm:grid-cols-2 gap-5">
+<div>
+<label class="block text-sm font-semibold text-gray-600 mb-2">Amount (&#8377;)</label>
+<input class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-orange" id="gstAmount" type="number" value="10000"/>
+</div>
+<div>
+<label class="block text-sm font-semibold text-gray-600 mb-2">GST Rate</label>
+<select class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-orange" id="gstRate">
+<option value="5">5%</option>
+<option value="12">12%</option>
+<option selected="" value="18">18%</option>
+<option value="28">28%</option>
+</select>
+</div>
+</div>
+<div class="mt-8 bg-brand-light rounded-xl p-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+<div>
+<p class="text-sm text-gray-500">Original Amount</p>
+<p class="text-xl font-bold text-brand-navy" id="gstOriginal">&#8377;0</p>
+</div>
+<div>
+<p class="text-sm text-gray-500">GST Amount</p>
+<p class="text-xl font-bold text-brand-orange" id="gstTax">&#8377;0</p>
+</div>
+<div>
+<p class="text-sm text-gray-500">Total Amount</p>
+<p class="text-xl font-bold text-brand-navy" id="gstTotal">&#8377;0</p>
+</div>
+</div>
+</div>
+
+<!-- SIP Calculator -->
+<div class="calc-panel hidden bg-white rounded-2xl shadow-sm border border-gray-100 p-8" data-panel="sip">
+<h2 class="text-2xl font-bold text-brand-navy mb-1">SIP Calculator</h2>
+<p class="text-gray-500 mb-6">Estimate the maturity value of a monthly SIP investment.</p>
+<div class="grid sm:grid-cols-3 gap-5">
+<div>
+<label class="block text-sm font-semibold text-gray-600 mb-2">Monthly Investment (&#8377;)</label>
+<input class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-orange" id="sipAmount" type="number" value="5000"/>
+</div>
+<div>
+<label class="block text-sm font-semibold text-gray-600 mb-2">Expected Return (% p.a.)</label>
+<input class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-orange" id="sipRate" type="number" value="12"/>
+</div>
+<div>
+<label class="block text-sm font-semibold text-gray-600 mb-2">Time Period (years)</label>
+<input class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-orange" id="sipYears" type="number" value="10"/>
+</div>
+</div>
+<div class="mt-8 bg-brand-light rounded-xl p-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+<div>
+<p class="text-sm text-gray-500">Invested Amount</p>
+<p class="text-xl font-bold text-brand-navy" id="sipInvested">&#8377;0</p>
+</div>
+<div>
+<p class="text-sm text-gray-500">Estimated Returns</p>
+<p class="text-xl font-bold text-brand-orange" id="sipReturns">&#8377;0</p>
+</div>
+<div>
+<p class="text-sm text-gray-500">Maturity Value</p>
+<p class="text-xl font-bold text-brand-navy" id="sipMaturity">&#8377;0</p>
+</div>
+</div>
+<p class="mt-4 text-xs text-gray-400">Illustrative estimate only. Actual mutual fund returns are market-linked and not guaranteed.</p>
+</div>
+
+<!-- Business Loan EMI -->
+<div class="calc-panel hidden bg-white rounded-2xl shadow-sm border border-gray-100 p-8" data-panel="business-loan-emi">
+<h2 class="text-2xl font-bold text-brand-navy mb-1">Business Loan EMI Calculator</h2>
+<p class="text-gray-500 mb-6">Estimate your monthly instalment for a business loan.</p>
+<div class="grid sm:grid-cols-3 gap-5">
+<div>
+<label class="block text-sm font-semibold text-gray-600 mb-2">Loan Amount (&#8377;)</label>
+<input class="emi-amount w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-orange" data-scope="business-loan-emi" type="number" value="1000000"/>
+</div>
+<div>
+<label class="block text-sm font-semibold text-gray-600 mb-2">Interest Rate (% p.a.)</label>
+<input class="emi-rate w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-orange" data-scope="business-loan-emi" type="number" value="14"/>
+</div>
+<div>
+<label class="block text-sm font-semibold text-gray-600 mb-2">Tenure (years)</label>
+<input class="emi-years w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-orange" data-scope="business-loan-emi" type="number" value="5"/>
+</div>
+</div>
+<div class="mt-8 bg-brand-light rounded-xl p-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+<div>
+<p class="text-sm text-gray-500">Monthly EMI</p>
+<p class="text-xl font-bold text-brand-orange emi-result-emi" data-scope="business-loan-emi">&#8377;0</p>
+</div>
+<div>
+<p class="text-sm text-gray-500">Total Interest</p>
+<p class="text-xl font-bold text-brand-navy emi-result-interest" data-scope="business-loan-emi">&#8377;0</p>
+</div>
+<div>
+<p class="text-sm text-gray-500">Total Payment</p>
+<p class="text-xl font-bold text-brand-navy emi-result-total" data-scope="business-loan-emi">&#8377;0</p>
+</div>
+</div>
+</div>
+
+<!-- Personal Loan EMI -->
+<div class="calc-panel hidden bg-white rounded-2xl shadow-sm border border-gray-100 p-8" data-panel="personal-loan-emi">
+<h2 class="text-2xl font-bold text-brand-navy mb-1">Personal Loan EMI Calculator</h2>
+<p class="text-gray-500 mb-6">Estimate your monthly instalment for a personal loan.</p>
+<div class="grid sm:grid-cols-3 gap-5">
+<div>
+<label class="block text-sm font-semibold text-gray-600 mb-2">Loan Amount (&#8377;)</label>
+<input class="emi-amount w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-orange" data-scope="personal-loan-emi" type="number" value="300000"/>
+</div>
+<div>
+<label class="block text-sm font-semibold text-gray-600 mb-2">Interest Rate (% p.a.)</label>
+<input class="emi-rate w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-orange" data-scope="personal-loan-emi" type="number" value="11"/>
+</div>
+<div>
+<label class="block text-sm font-semibold text-gray-600 mb-2">Tenure (years)</label>
+<input class="emi-years w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-orange" data-scope="personal-loan-emi" type="number" value="3"/>
+</div>
+</div>
+<div class="mt-8 bg-brand-light rounded-xl p-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+<div>
+<p class="text-sm text-gray-500">Monthly EMI</p>
+<p class="text-xl font-bold text-brand-orange emi-result-emi" data-scope="personal-loan-emi">&#8377;0</p>
+</div>
+<div>
+<p class="text-sm text-gray-500">Total Interest</p>
+<p class="text-xl font-bold text-brand-navy emi-result-interest" data-scope="personal-loan-emi">&#8377;0</p>
+</div>
+<div>
+<p class="text-sm text-gray-500">Total Payment</p>
+<p class="text-xl font-bold text-brand-navy emi-result-total" data-scope="personal-loan-emi">&#8377;0</p>
+</div>
+</div>
+</div>
+
+<!-- Income Tax Calculator (consult CTA, no hardcoded slabs) -->
+<div class="calc-panel hidden bg-white rounded-2xl shadow-sm border border-gray-100 p-8 text-center" data-panel="income-tax">
+<h2 class="text-2xl font-bold text-brand-navy mb-3">Income Tax Calculator</h2>
+<p class="text-gray-600 max-w-xl mx-auto">Income tax slabs and rebates change with every Union Budget and depend on your income sources, deductions and regime choice. Rather than show you a number that could be out of date, talk to one of our tax experts for an accurate, personalised calculation &mdash; free of cost.</p>
+<a class="inline-flex items-center gap-2 mt-6 bg-brand-orange text-white font-semibold px-8 py-3 rounded-full hover:bg-brand-orangeDark transition duration-300" href="https://wa.me/919204387707?text=Hi%2C%20I%27d%20like%20help%20calculating%20my%20income%20tax." rel="noopener" target="_blank">
+<svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C10 9.4 9.5 8 9.3 7.6c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"></path><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.4C8.4 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.7 0-3.3-.5-4.6-1.3l-.3-.2-3.3.9.9-3.2-.2-.3C3.5 14.5 3 13 3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9z"></path></svg>
+          Get My Tax Calculated on WhatsApp
+        </a>
+</div>
+
+<!-- TDS Calculator (consult CTA, no hardcoded rates) -->
+<div class="calc-panel hidden bg-white rounded-2xl shadow-sm border border-gray-100 p-8 text-center" data-panel="tds">
+<h2 class="text-2xl font-bold text-brand-navy mb-3">TDS Calculator</h2>
+<p class="text-gray-600 max-w-xl mx-auto">TDS rates depend on the exact payment type and section it falls under (salary, rent, professional fees, contractor payments and more), and change periodically. Talk to our experts for an accurate TDS calculation and deduction schedule for your specific case &mdash; free of cost.</p>
+<a class="inline-flex items-center gap-2 mt-6 bg-brand-orange text-white font-semibold px-8 py-3 rounded-full hover:bg-brand-orangeDark transition duration-300" href="https://wa.me/919204387707?text=Hi%2C%20I%27d%20like%20help%20calculating%20TDS." rel="noopener" target="_blank">
+<svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C10 9.4 9.5 8 9.3 7.6c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"></path><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.4C8.4 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.7 0-3.3-.5-4.6-1.3l-.3-.2-3.3.9.9-3.2-.2-.3C3.5 14.5 3 13 3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9z"></path></svg>
+          Get My TDS Calculated on WhatsApp
+        </a>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+<!-- END: Calculators Section -->
+
+<!-- BEGIN: Footer -->
+<footer class="bg-brand-navy text-white pt-16 pb-8 mt-10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<a class="inline-flex bg-white rounded-xl px-4 py-2" href="index.html#home">
+<img alt="Vyaptum Advisory" class="h-10 w-auto" src="img/brand/logo.jpeg"/>
+</a>
+<p class="text-gray-300 mt-6">
+<a class="hover:text-white" href="index.html">Home</a> &middot;
+        <a class="hover:text-white" href="index.html#about">About</a> &middot;
+        <a class="hover:text-white" href="index.html#contact">Contact</a>
+</p>
+<p class="text-xs text-gray-500 mt-8 max-w-2xl mx-auto">
+        Calculator results are indicative estimates for planning purposes only and do not constitute financial, tax or legal advice.
+      </p>
+</div>
+</footer>
+<!-- END: Footer -->
+
+<script>
+    (function () {
+      var menuBtn = document.getElementById('mobileMenuBtn');
+      var closeBtn = document.getElementById('mobileMenuClose');
+      var overlay = document.getElementById('mobileMenuOverlay');
+      var menu = document.getElementById('mobileMenu');
+
+      function openMenu() {
+        overlay.classList.remove('hidden');
+        menu.classList.remove('translate-x-full');
+        menu.setAttribute('aria-hidden', 'false');
+        menuBtn.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('overflow-hidden');
+      }
+
+      function closeMenu() {
+        overlay.classList.add('hidden');
+        menu.classList.add('translate-x-full');
+        menu.setAttribute('aria-hidden', 'true');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('overflow-hidden');
+      }
+
+      menuBtn.addEventListener('click', openMenu);
+      closeBtn.addEventListener('click', closeMenu);
+      overlay.addEventListener('click', closeMenu);
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      menu.querySelectorAll('.mobile-accordion-trigger').forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var panel = trigger.nextElementSibling;
+          var icon = trigger.querySelector('svg');
+          panel.classList.toggle('hidden');
+          icon.classList.toggle('rotate-90');
+        });
+      });
+    })();
+  </script>
+
+<script>
+    (function () {
+      function formatINR(n) {
+        if (!isFinite(n)) n = 0;
+        return '₹' + Math.round(n).toLocaleString('en-IN');
+      }
+
+      // ---- Panel switching ----
+      var validTypes = ['gst', 'income-tax', 'sip', 'tds', 'business-loan-emi', 'personal-loan-emi'];
+      var params = new URLSearchParams(window.location.search);
+      var activeType = params.get('type');
+      if (validTypes.indexOf(activeType) === -1) activeType = 'gst';
+
+      document.querySelectorAll('.calc-panel').forEach(function (panel) {
+        panel.classList.toggle('hidden', panel.getAttribute('data-panel') !== activeType);
+      });
+      document.querySelectorAll('.calc-nav-link').forEach(function (link) {
+        var isActive = link.getAttribute('data-type') === activeType;
+        link.classList.toggle('bg-brand-navy', isActive);
+        link.classList.toggle('text-white', isActive);
+        link.classList.toggle('text-gray-600', !isActive);
+      });
+
+      // ---- GST Calculator ----
+      var gstAmount = document.getElementById('gstAmount');
+      var gstRate = document.getElementById('gstRate');
+      var gstMode = 'add';
+      document.querySelectorAll('.gst-mode-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          gstMode = btn.getAttribute('data-mode');
+          document.querySelectorAll('.gst-mode-btn').forEach(function (b) {
+            var active = b === btn;
+            b.classList.toggle('bg-brand-navy', active);
+            b.classList.toggle('text-white', active);
+            b.classList.toggle('border-brand-navy', active);
+            b.classList.toggle('border-gray-200', !active);
+            b.classList.toggle('text-gray-600', !active);
+          });
+          computeGST();
+        });
+      });
+      function computeGST() {
+        var amount = parseFloat(gstAmount.value) || 0;
+        var rate = parseFloat(gstRate.value) || 0;
+        var original, tax, total;
+        if (gstMode === 'add') {
+          original = amount;
+          tax = amount * rate / 100;
+          total = original + tax;
+        } else {
+          total = amount;
+          original = amount * 100 / (100 + rate);
+          tax = total - original;
+        }
+        document.getElementById('gstOriginal').textContent = formatINR(original);
+        document.getElementById('gstTax').textContent = formatINR(tax);
+        document.getElementById('gstTotal').textContent = formatINR(total);
+      }
+      if (gstAmount) {
+        gstAmount.addEventListener('input', computeGST);
+        gstRate.addEventListener('change', computeGST);
+        computeGST();
+      }
+
+      // ---- SIP Calculator ----
+      function computeSIP() {
+        var monthly = parseFloat(document.getElementById('sipAmount').value) || 0;
+        var annualRate = parseFloat(document.getElementById('sipRate').value) || 0;
+        var years = parseFloat(document.getElementById('sipYears').value) || 0;
+        var n = years * 12;
+        var i = annualRate / 12 / 100;
+        var maturity = i > 0 ? monthly * ((Math.pow(1 + i, n) - 1) / i) * (1 + i) : monthly * n;
+        var invested = monthly * n;
+        document.getElementById('sipInvested').textContent = formatINR(invested);
+        document.getElementById('sipReturns').textContent = formatINR(maturity - invested);
+        document.getElementById('sipMaturity').textContent = formatINR(maturity);
+      }
+      var sipInputs = document.querySelectorAll('#sipAmount, #sipRate, #sipYears');
+      if (sipInputs.length) {
+        sipInputs.forEach(function (el) { el.addEventListener('input', computeSIP); });
+        computeSIP();
+      }
+
+      // ---- EMI Calculators (shared logic, scoped by data-scope) ----
+      function computeEMI(scope) {
+        var amountEl = document.querySelector('.emi-amount[data-scope="' + scope + '"]');
+        var rateEl = document.querySelector('.emi-rate[data-scope="' + scope + '"]');
+        var yearsEl = document.querySelector('.emi-years[data-scope="' + scope + '"]');
+        if (!amountEl) return;
+        var principal = parseFloat(amountEl.value) || 0;
+        var annualRate = parseFloat(rateEl.value) || 0;
+        var years = parseFloat(yearsEl.value) || 0;
+        var n = years * 12;
+        var r = annualRate / 12 / 100;
+        var emi = 0;
+        if (n > 0) {
+          emi = r > 0 ? (principal * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1) : principal / n;
+        }
+        var totalPayment = emi * n;
+        var totalInterest = totalPayment - principal;
+        document.querySelector('.emi-result-emi[data-scope="' + scope + '"]').textContent = formatINR(emi);
+        document.querySelector('.emi-result-interest[data-scope="' + scope + '"]').textContent = formatINR(totalInterest);
+        document.querySelector('.emi-result-total[data-scope="' + scope + '"]').textContent = formatINR(totalPayment);
+      }
+      ['business-loan-emi', 'personal-loan-emi'].forEach(function (scope) {
+        var inputs = document.querySelectorAll('[data-scope="' + scope + '"]');
+        if (!inputs.length) return;
+        inputs.forEach(function (el) {
+          if (el.tagName === 'INPUT') el.addEventListener('input', function () { computeEMI(scope); });
+        });
+        computeEMI(scope);
+      });
+    })();
+  </script>
+</body></html>
