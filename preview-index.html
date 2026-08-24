@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Desktop 3D Preview Gallery - Vyaptum Advisory</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#3f1d63',
+              orange: '#c8720a',
+              orangeDark: '#a85f08',
+              light: '#faf7f2',
+              surface: '#ffffff'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Fraunces', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf7f2;
+    }
+    h1, h2, h3 {
+      font-family: 'Fraunces', serif;
+    }
+  </style>
+</head>
+<body class="antialiased text-gray-800">
+<div class="max-w-5xl mx-auto px-6 py-16">
+<div class="text-center mb-14">
+<p class="text-sm font-semibold uppercase tracking-widest text-brand-orange mb-3">Internal preview &mdash; not linked from the live site</p>
+<h1 class="text-3xl md:text-4xl font-extrabold text-brand-navy">Desktop 3D-Interactive Variants</h1>
+<p class="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">Three different takes on adding 3D/interactive motion to the homepage. All are desktop-only &mdash; open each on a laptop/desktop browser and interact with the hero and cards. Mobile is completely unchanged in every variant.</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+<div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col">
+<span class="inline-block text-xs font-bold uppercase tracking-wider text-brand-orange mb-2">Variant A</span>
+<h2 class="text-xl font-bold text-brand-navy mb-2">Mouse-Tilt Hero</h2>
+<p class="text-gray-600 text-sm flex-1">The hero photo tilts in 3D and catches a light "shine" as your cursor moves over it &mdash; like a holographic card. Subtlest of the three, focused entirely on the hero.</p>
+<a class="mt-6 inline-flex items-center justify-center gap-2 bg-brand-navy text-white font-semibold px-5 py-3 rounded-lg hover:bg-brand-navy/90 transition" href="preview-3d-tilt.html">
+        Open Preview <span aria-hidden="true">&rarr;</span>
+      </a>
+</div>
+
+<div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col">
+<span class="inline-block text-xs font-bold uppercase tracking-wider text-brand-orange mb-2">Variant B</span>
+<h2 class="text-xl font-bold text-brand-navy mb-2">Scroll Parallax Depth</h2>
+<p class="text-gray-600 text-sm flex-1">Soft glowing color blobs and the hero image drift at different speeds as you scroll, creating a layered sense of depth through the hero section.</p>
+<a class="mt-6 inline-flex items-center justify-center gap-2 bg-brand-navy text-white font-semibold px-5 py-3 rounded-lg hover:bg-brand-navy/90 transition" href="preview-3d-parallax.html">
+        Open Preview <span aria-hidden="true">&rarr;</span>
+      </a>
+</div>
+
+<div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col">
+<span class="inline-block text-xs font-bold uppercase tracking-wider text-brand-orange mb-2">Variant C</span>
+<h2 class="text-xl font-bold text-brand-navy mb-2">3D Hover Cards</h2>
+<p class="text-gray-600 text-sm flex-1">Every card across Benefits, Documents Required and Why Choose Us tilts toward your cursor and lifts with a soft shadow on hover &mdash; interactive throughout the page, not just the hero.</p>
+<a class="mt-6 inline-flex items-center justify-center gap-2 bg-brand-navy text-white font-semibold px-5 py-3 rounded-lg hover:bg-brand-navy/90 transition" href="preview-3d-cards.html">
+        Open Preview <span aria-hidden="true">&rarr;</span>
+      </a>
+</div>
+
+</div>
+
+<div class="mt-14 bg-brand-light border border-gray-200 rounded-2xl p-6 text-center">
+<p class="text-gray-700">None of these are applied to the real site yet. Tell me which one (or which parts of each) you like and I'll build it into <code class="bg-white px-1.5 py-0.5 rounded text-sm border border-gray-200">index.html</code> for real.</p>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vyaptum Advisory - Private Limited Company Registration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#3f1d63',
+              orange: '#c8720a',
+              orangeDark: '#a85f08',
+              light: '#faf7f2',
+              surface: '#ffffff'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Fraunces', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style data-purpose="custom-utilities">
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf7f2;
+      background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLtGjDicHHxMBbA0lkv7Ce7JooZcFTJVUnP8QAjKwRug4U6MHv7zmHallTnz_OIWjeCRh6IAr05xIbpBdbQmZl89FX0Vr2ru1I0xgXldsQKtsQB-UBCRAQzUtnIY0FBVyqaG04yCeJIcJpgJhbg3U80Lg5noUaOExdV54fv8SOrs4KAYby6t4bczE18x8yniRlC1pwg_0Fct0PyEviqZbZA4xNP6S4FJ7cAvV0cgWwc0GEVXHJKoDdjwFw');
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Fraunces', serif;
+    }
+    select option {
+      color: #111827;
+      background-color: #ffffff;
+    }
+    .text-gradient {
+      background: linear-gradient(90deg, #3f1d63 0%, #c8720a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    [id] {
+      scroll-margin-top: 96px;
+    }
+    .testimonial-pattern {
+      background-color: #0d2235;
+      background-image:
+        radial-gradient(circle at 8% 12%, rgba(200, 114, 10, 0.4), transparent 32%),
+        radial-gradient(circle at 92% 15%, rgba(139, 92, 246, 0.35), transparent 30%),
+        radial-gradient(circle at 85% 90%, rgba(63, 29, 99, 0.55), transparent 40%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36'%3E%3Ccircle cx='2' cy='2' r='1.5' fill='white' fill-opacity='0.14'/%3E%3C/svg%3E");
+      background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+      background-size: auto, auto, auto, 36px 36px;
+    }
+    .hero-pattern {
+      background-color: #faf7f2;
+      background-image:
+        radial-gradient(circle at 6% 10%, rgba(200, 114, 10, 0.18), transparent 32%),
+        radial-gradient(circle at 94% 20%, rgba(63, 29, 99, 0.16), transparent 32%),
+        radial-gradient(circle at 50% 105%, rgba(139, 92, 246, 0.14), transparent 45%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36'%3E%3Ccircle cx='2' cy='2' r='1.5' fill='%233f1d63' fill-opacity='0.10'/%3E%3C/svg%3E");
+      background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+      background-size: auto, auto, auto, 36px 36px;
+    }
+    /* Desktop-only 3D hover tilt for cards — the JS that drives this never
+       attaches on touch devices / narrow viewports, so mobile is untouched. */
+    .tilt-card {
+      transform-style: preserve-3d;
+      transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+      will-change: transform;
+    }
+    .tilt-card.is-tilting {
+      transition: transform 0.05s linear;
+      box-shadow: 0 25px 40px -12px rgba(63, 29, 99, 0.35);
+    }
+  </style>
+</head>
+<body class="antialiased text-gray-800">
+<!-- BEGIN: Navigation -->
+<nav class="bg-white shadow-sm sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-20">
+<div class="flex items-center">
+<a class="flex-shrink-0 flex items-center" href="index.html#home">
+<img alt="Vyaptum Advisory" class="h-9 w-auto" src="img/brand/logo.jpeg"/>
+</a>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-gray-600 hover:text-brand-navy font-medium" href="service.html?name=Private%20Limited%20Company%20Registration&amp;category=Registrations">Services</a>
+<a class="text-gray-600 hover:text-brand-navy font-medium" href="service.html?name=ROC%20Compliance&amp;category=Compliance">Compliance</a>
+<a class="text-gray-600 hover:text-brand-navy font-medium" href="service.html?name=GST%20Return&amp;category=Compliance">Tax</a>
+<a class="text-gray-600 hover:text-brand-navy font-medium" href="#about">About</a>
+<a class="text-gray-600 hover:text-brand-navy font-medium" href="#contact">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<a class="hidden md:inline-block bg-brand-orange text-white px-6 py-2 rounded-md font-semibold hover:bg-brand-orangeDark transition duration-300" href="#contact">Start Now</a>
+<button aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu" class="md:hidden flex items-center justify-center w-10 h-10 text-brand-navy" id="mobileMenuBtn" type="button">
+<svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<!-- END: Navigation -->
+<!-- BEGIN: Mobile Menu Drawer -->
+<div class="fixed inset-0 bg-black/40 z-[60] hidden" id="mobileMenuOverlay"></div>
+<div aria-hidden="true" class="fixed inset-y-0 right-0 w-full max-w-sm bg-white z-[70] translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto" id="mobileMenu">
+<div class="flex justify-end items-center px-4 h-16 border-b border-gray-100">
+<button aria-label="Close menu" class="flex items-center justify-center w-10 h-10 text-brand-navy" id="mobileMenuClose" type="button">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+</div>
+<div class="px-2">
+<!-- Registrations -->
+<div class="border-b border-gray-100">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+            Registrations
+            <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<div class="hidden mobile-accordion-panel px-3 pb-4 space-y-3">
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Private%20Limited%20Company&amp;category=Registrations">Private Limited Company</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Public%20Limited%20Company&amp;category=Registrations">Public Limited Company</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Partnership&amp;category=Registrations">Partnership</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=One%20Person%20Company&amp;category=Registrations">One Person Company</a>
+</div>
+</div>
+<!-- Compliance -->
+<div class="border-b border-gray-100">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+            Compliance
+            <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<div class="hidden mobile-accordion-panel px-3 pb-4 space-y-3">
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Annual%20Filing&amp;category=Compliance">Annual Filing</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=GST%20Return&amp;category=Compliance">GST Return</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Income%20Tax%20Return&amp;category=Compliance">Income Tax Return</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=ROC%20Compliance&amp;category=Compliance">ROC Compliance</a>
+</div>
+</div>
+<!-- IPR -->
+<div class="border-b border-gray-100">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+            IPR
+            <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<div class="hidden mobile-accordion-panel px-3 pb-4 space-y-3">
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Trademark%20Registration&amp;category=IPR">Trademark Registration</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Patent%20Registration&amp;category=IPR">Patent Registration</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Copyright%20Registration&amp;category=IPR">Copyright Registration</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Design%20Registration&amp;category=IPR">Design Registration</a>
+</div>
+</div>
+<!-- Lawyer Services -->
+<div class="border-b border-gray-100">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+            Lawyer Services
+            <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<div class="hidden mobile-accordion-panel px-3 pb-4 space-y-3">
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Talk%20to%20a%20Lawyer&amp;category=Lawyer%20Services">Talk to a Lawyer</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Legal%20Notice&amp;category=Lawyer%20Services">Legal Notice</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Contract%20Drafting&amp;category=Lawyer%20Services">Contract Drafting</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Legal%20Documentation&amp;category=Lawyer%20Services">Legal Documentation</a>
+</div>
+</div>
+<!-- Calculators -->
+<div class="border-b border-gray-100">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+            Calculators
+            <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<div class="hidden mobile-accordion-panel px-3 pb-4 space-y-3">
+<a class="block text-gray-600 hover:text-brand-orange" href="calculator.html?type=gst">GST Calculator</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="calculator.html?type=income-tax">Income Tax Calculator</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="calculator.html?type=sip">SIP Calculator</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="calculator.html?type=tds">TDS Calculator</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="calculator.html?type=business-loan-emi">Business Loan EMI</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="calculator.html?type=personal-loan-emi">Personal Loan EMI</a>
+</div>
+</div>
+<!-- Taxation -->
+<a class="block py-5 px-3 font-bold text-brand-navy border-b border-gray-100" href="service.html?name=GST%20Return&amp;category=Compliance">Taxation</a>
+<!-- Consultation -->
+<a class="block py-5 px-3 font-bold text-brand-navy border-b border-gray-100" href="https://wa.me/919204387707?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20consultation." rel="noopener" target="_blank">Consultation</a>
+<!-- More -->
+<div class="border-b border-gray-100">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+            More
+            <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<div class="hidden mobile-accordion-panel px-3 pb-4 space-y-3">
+<a class="block text-gray-600 hover:text-brand-orange" href="index.html#home">Home</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="#about">About</a>
+</div>
+</div>
+<!-- Contact Us -->
+<a class="block py-5 px-3 font-bold text-brand-navy border-b border-gray-100" href="https://wa.me/919204387707?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services." rel="noopener" target="_blank">Contact Us</a>
+</div>
+<div class="p-4">
+<a class="w-full flex items-center justify-center gap-2 bg-brand-orange text-white font-semibold py-4 rounded-full hover:bg-brand-orangeDark transition duration-300" href="https://wa.me/919204387707?text=Hi%2C%20I%27d%20like%20to%20talk%20to%20an%20expert." rel="noopener" target="_blank">
+<svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C10 9.4 9.5 8 9.3 7.6c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"></path><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.4C8.4 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.7 0-3.3-.5-4.6-1.3l-.3-.2-3.3.9.9-3.2-.2-.3C3.5 14.5 3 13 3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9z"></path></svg>
+          Talk to Experts
+        </a>
+</div>
+</div>
+<!-- END: Mobile Menu Drawer -->
+<!-- BEGIN: Hero Section -->
+<header class="pt-16 pb-24 relative overflow-hidden hero-pattern" id="home">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<img alt="Vyaptum Advisory Hero" class="w-full rounded-2xl shadow-xl mb-12" src="img/whychooseus/hero.jpeg"/>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<!-- Hero Content -->
+<div>
+<h1 class="text-4xl sm:text-5xl font-extrabold text-brand-navy leading-tight">
+              Private Limited Company Registration
+            </h1>
+<p class="mt-4 text-xl text-gray-700 font-medium">
+              Get your Private Limited Company Registration in just <span class="text-brand-navy font-bold">7 days</span> at <span class="text-brand-orange font-bold">Rs.1,999/-</span> only.
+            </p>
+<ul class="mt-6 space-y-3">
+<li class="flex items-center text-gray-700">
+<svg class="h-6 w-6 text-brand-orange mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                2 DIN and DSC for two Directors
+              </li>
+<li class="flex items-center text-gray-700">
+<svg class="h-6 w-6 text-brand-orange mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                Drafting of MoA &amp; AoA
+              </li>
+<li class="flex items-center text-gray-700">
+<svg class="h-6 w-6 text-brand-orange mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                Registration fees and stamp duty
+              </li>
+</ul>
+</div>
+<!-- Registration Form -->
+<div class="bg-brand-navy p-8 rounded-2xl shadow-2xl relative" id="contact">
+<div class="text-center mb-6">
+<h3 class="text-xl font-bold text-white leading-tight">
+              Submit your Details to get an Instant <span class="text-brand-orange">All-inclusive</span> Quote to your email and a <span class="text-brand-orange">FREE</span> Expert consultation
+            </h3>
+</div>
+<form class="space-y-5">
+<div>
+<input class="w-full bg-white/10 border border-white/20 text-white placeholder-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-orange" placeholder="Full Name" type="text"/>
+</div>
+<div class="flex space-x-3">
+<select class="bg-white/10 border border-white/20 text-white rounded-lg px-3 py-3 focus:outline-none focus:ring-2 focus:ring-brand-orange">
+<option value="+91">+91</option>
+</select>
+<input class="flex-1 w-full bg-white/10 border border-white/20 text-white placeholder-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-orange" placeholder="Mobile Number" type="tel"/>
+</div>
+<div>
+<input class="w-full bg-white/10 border border-white/20 text-white placeholder-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-orange" placeholder="Enter your Email" type="email"/>
+</div>
+<div>
+<select class="w-full bg-white/10 border border-white/20 text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-orange appearance-none">
+<option disabled="" selected="" value="">Select your state</option>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Odisha">Odisha</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Telangana">Telangana</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="Uttarakhand">Uttarakhand</option>
+<option value="West Bengal">West Bengal</option>
+<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+<option value="Delhi">Delhi (NCT)</option>
+<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+<option value="Ladakh">Ladakh</option>
+<option value="Lakshadweep">Lakshadweep</option>
+<option value="Puducherry">Puducherry</option>
+</select>
+</div>
+<button class="w-full bg-brand-orange text-white font-bold text-lg rounded-lg px-4 py-4 hover:bg-brand-orangeDark transition duration-300 shadow-lg" type="submit">
+              Get a Detailed Quotation!
+            </button>
+</form>
+<div class="mt-6 flex items-center justify-center space-x-4 bg-white p-4 rounded-xl">
+<div class="flex -space-x-2">
+<!-- Placeholder for Google Logo -->
+<div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold text-gray-500">G</div>
+</div>
+<div>
+<p class="text-sm font-bold text-gray-800">Average Google Rating</p>
+<div class="flex items-center">
+<span class="text-brand-orange mr-1 font-bold">4.6</span>
+<div class="flex text-brand-orange text-sm">
+                   ★★★★☆
+                 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- END: Hero Section -->
+<!-- BEGIN: Benefits Section -->
+<section class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy">
+<span class="text-brand-orange">Benefits</span> of Private Limited Company Registration
+        </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Benefit 1 -->
+<div class="bg-gray-50 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition tilt-card">
+<div class="h-32 flex items-center justify-center mb-6">
+<div class="h-20 w-20 rounded-full bg-brand-light flex items-center justify-center">
+<svg class="h-10 w-10 text-brand-navy" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" stroke-linejoin="round"></path><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+</div>
+<h3 class="text-lg font-bold text-brand-navy">Limited Liability Protection to Directors personal assets</h3>
+</div>
+<!-- Benefit 2 -->
+<div class="bg-gray-50 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition tilt-card">
+<div class="h-32 flex items-center justify-center mb-6">
+<div class="h-20 w-20 rounded-full bg-brand-light flex items-center justify-center">
+<svg class="h-10 w-10 text-brand-navy" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><circle cx="12" cy="8" r="5"></circle><path d="M9 12.5L7 21l5-3 5 3-2-8.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+</div>
+<h3 class="text-lg font-bold text-brand-navy">Better image and credibility in Market</h3>
+</div>
+<!-- Benefit 3 -->
+<div class="bg-gray-50 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition tilt-card">
+<div class="h-32 flex items-center justify-center mb-6">
+<div class="h-20 w-20 rounded-full bg-brand-light flex items-center justify-center">
+<svg class="h-10 w-10 text-brand-navy" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15 7h6v6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+</div>
+<h3 class="text-lg font-bold text-brand-navy">Easy to raise fund, capital and loans</h3>
+</div>
+<!-- Benefit 4 -->
+<div class="bg-gray-50 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition tilt-card">
+<div class="h-32 flex items-center justify-center mb-6">
+<div class="h-20 w-20 rounded-full bg-brand-light flex items-center justify-center">
+<svg class="h-10 w-10 text-brand-navy" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M17 20v-1a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v1" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="9" cy="7" r="3"></circle><path d="M23 20v-1a4 4 0 0 0-3-3.87" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16 3.13a4 4 0 0 1 0 7.75" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+</div>
+<h3 class="text-lg font-bold text-brand-navy">Favorite Business structure for Investors</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Benefits Section -->
+<!-- BEGIN: Checklist Section -->
+<section class="py-20 bg-brand-light">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy mb-4">
+        What to keep in mind while Registering a <br/> <span class="text-brand-orange">Private Limited Company Registration?</span>
+</h2>
+<p class="text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
+        As defined by the Companies Act 2013, we must guarantee that the checklist requirements are met.
+      </p><div class="mb-12 flex justify-center"><div class="h-40 w-40 rounded-full bg-white shadow-sm flex items-center justify-center"><svg class="h-20 w-20 text-brand-navy" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><rect height="17" rx="2" width="14" x="5" y="4"></rect><path d="M9 3h6a1 1 0 0 1 1 1v1H8V4a1 1 0 0 1 1-1z"></path><path d="M8.5 11.5l1.5 1.5 3-3" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8.5 16.5l1.5 1.5 3-3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto text-left">
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+<h3 class="text-2xl font-bold text-brand-navy mb-3">Two Directors</h3>
+<p class="text-gray-600">A private limited company must have at least two directors, with a maximum of fifteen. A minimum of one of the company's directors must be a resident of India.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+<h3 class="text-2xl font-bold text-brand-navy mb-3">Unique Name</h3>
+<p class="text-gray-600">The name of your business must be unique. The suggested name should not match with any existing companies or trademarks in India.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+<h3 class="text-2xl font-bold text-brand-navy mb-3">Minimum Capital Contribution</h3>
+<p class="text-gray-600">There is no minimum capital amount for a company. A company should have an authorized capital of at least ₹1 lakh.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+<h3 class="text-2xl font-bold text-brand-navy mb-3">Registered Office</h3>
+<p class="text-gray-600">The registered office of a company does not have to be commercial space. Even a rented home can be the registered office, so long as an NOC is obtained from the landlord.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Checklist Section -->
+<!-- BEGIN: Documents Required Section -->
+<section class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy">
+<span class="text-brand-orange">Documents</span> required For Private Limited Company Registration
+        </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-gray-50 rounded-2xl p-6 text-center shadow-sm tilt-card">
+<img alt="PAN Card" class="w-full h-auto rounded-xl" src="img/whychooseus/pancard.jpeg"/>
+</div>
+<div class="bg-gray-50 rounded-2xl p-6 text-center shadow-sm tilt-card">
+<img alt="Photograph" class="w-full h-auto rounded-xl" src="img/whychooseus/photograph.jpeg"/>
+</div>
+<div class="bg-gray-50 rounded-2xl p-6 text-center shadow-sm tilt-card">
+<img alt="Identity Proof" class="w-full h-auto rounded-xl" src="img/whychooseus/identitiyproof.jpeg"/>
+</div>
+<div class="bg-gray-50 rounded-2xl p-6 text-center shadow-sm tilt-card">
+<img alt="Address Proof" class="w-full h-auto rounded-xl" src="img/whychooseus/bussinessaddressproff.jpeg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Documents Required Section -->
+<!-- BEGIN: Why Choose Us Section -->
+<section class="py-20 bg-brand-light">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy">
+<span class="text-brand-orange">Why</span> Choose Us
+        </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+<div class="bg-white rounded-2xl p-6 text-center shadow-sm tilt-card">
+<img alt="Fair and Adjusted Pricing" class="w-full h-auto rounded-xl" src="img/whychooseus/fairandadjustedprice.jpeg"/>
+</div>
+<div class="bg-white rounded-2xl p-6 text-center shadow-sm tilt-card">
+<img alt="Five Star Rating" class="w-full h-auto rounded-xl" src="img/whychooseus/fivestarrating.jpeg"/>
+</div>
+<div class="bg-white rounded-2xl p-6 text-center shadow-sm tilt-card">
+<img alt="Smart Time Management" class="w-full h-auto rounded-xl" src="img/whychooseus/smarttimemanage.jpeg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Why Choose Us Section -->
+<!-- BEGIN: Testimonials Section -->
+<section class="py-20 testimonial-pattern relative overflow-hidden font-sans">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-10 gap-4">
+<h2 class="text-2xl md:text-3xl font-bold text-white">Testimonials That Speak for Us</h2>
+<a class="px-6 py-2 border border-white text-white rounded-lg hover:bg-white hover:text-[#0d2235] transition font-semibold text-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Vyaptum%20Advisory%2C%2068%2C%20Ground%20Floor%2C%20Institutional%20Area%2C%20Sector%2032%2C%20Gurugram%2C%20Haryana%20122001" rel="noopener" target="_blank">View All</a>
+</div>
+<div class="bg-[#1a2d42] p-8 md:p-10 rounded-3xl border border-white/10 shadow-xl">
+<div class="flex flex-col sm:flex-row items-start sm:items-center mb-6 gap-5">
+<img alt="Ramandeep Singh" class="w-20 h-20 rounded-full object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3IbEpv8Fw9TI2xJZUlyN2SBGavcRPwZ7T6R4EloSswT2Q0HY-B_mURqYTJSxE9ZJ8BTkqZQu6ipfa_h3N7x7ozllfjqwdmLCu9WJQVDAKhuMgsAu5gN8ANhqsoNvgA3cZgtEnmTQf3t0INEnb5Yp4FdX_k-GLZT5eM7zdmTPah1sbi4lwFIPFvawJJxYlq4zleFBNcaSiw3hOXsDj5V5XLlbnJh9plFu-Paz-Sc3-0UowAIAgvJVdcg"/>
+<div>
+<h3 class="text-xl md:text-2xl font-bold text-white mb-2">Ramandeep Singh</h3>
+<div class="flex items-center gap-3">
+<div class="flex text-[#F97316] text-xl gap-1">
+<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+</div>
+<span class="text-white/80 font-medium text-lg">5/5</span>
+</div>
+</div>
+</div>
+<p class="text-white text-lg leading-relaxed font-medium">
+Everything is good with kulwinder he is such a nice person and his way of communication is to good and he soves the quiers time to time
+</p>
+</div>
+<div class="flex justify-center items-center space-x-6 mt-10">
+<button class="w-12 h-12 rounded-full border border-white flex items-center justify-center text-white hover:bg-white hover:text-[#0d2235] transition">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<button class="w-12 h-12 rounded-full border border-white flex items-center justify-center text-white hover:bg-white hover:text-[#0d2235] transition">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+</div>
+</div>
+</section>
+<!-- END: Testimonials Section -->
+<footer class="bg-brand-navy text-white pt-20 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Top Section: Accordion/Columns -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12 border-b border-white/10 pb-12">
+<div>
+<h4 class="text-brand-orange font-bold uppercase tracking-wider mb-6 flex justify-between items-center">
+          REGISTRATIONS
+          <span class="material-symbols-outlined text-sm lg:hidden">expand_more</span>
+</h4>
+<ul class="space-y-4 text-gray-300 text-sm">
+<li class=""><a class="hover:text-white" href="service.html?name=Private%20Limited%20Company&amp;category=Registrations">Private Limited Company</a></li>
+<li class=""><a class="hover:text-white" href="service.html?name=Public%20Limited%20Company&amp;category=Registrations">Public Limited Company</a></li>
+<li class=""><a class="hover:text-white" href="service.html?name=Partnership&amp;category=Registrations">Partnership</a></li>
+<li class=""><a class="hover:text-white" href="service.html?name=One%20Person%20Company&amp;category=Registrations">One Person Company</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-brand-orange font-bold uppercase tracking-wider mb-6 flex justify-between items-center">
+          COMPLIANCE
+          <span class="material-symbols-outlined text-sm lg:hidden">expand_more</span>
+</h4>
+<ul class="space-y-4 text-gray-300 text-sm">
+<li class=""><a class="hover:text-white" href="service.html?name=Annual%20Filing&amp;category=Compliance">Annual Filing</a></li>
+<li class=""><a class="hover:text-white" href="service.html?name=GST%20Return&amp;category=Compliance">GST Return</a></li>
+<li class=""><a class="hover:text-white" href="service.html?name=Income%20Tax%20Return&amp;category=Compliance">Income Tax Return</a></li>
+<li class=""><a class="hover:text-white" href="service.html?name=ROC%20Compliance&amp;category=Compliance">ROC Compliance</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-brand-orange font-bold uppercase tracking-wider mb-6 flex justify-between items-center">
+          IPR
+          <span class="material-symbols-outlined text-sm lg:hidden">expand_more</span>
+</h4>
+<ul class="space-y-4 text-gray-300 text-sm">
+<li class=""><a class="hover:text-white" href="service.html?name=Trademark%20Registration&amp;category=IPR">Trademark Registration</a></li>
+<li class=""><a class="hover:text-white" href="service.html?name=Patent%20Registration&amp;category=IPR">Patent Registration</a></li>
+<li class=""><a class="hover:text-white" href="service.html?name=Copyright%20Registration&amp;category=IPR">Copyright Registration</a></li>
+<li class=""><a class="hover:text-white" href="service.html?name=Design%20Registration&amp;category=IPR">Design Registration</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-brand-orange font-bold uppercase tracking-wider mb-6 flex justify-between items-center">
+          LAWYER SERVICES
+          <span class="material-symbols-outlined text-sm lg:hidden">expand_more</span>
+</h4>
+<ul class="space-y-4 text-gray-300 text-sm">
+<li class=""><a class="hover:text-white" href="service.html?name=Talk%20to%20a%20Lawyer&amp;category=Lawyer%20Services">Talk to a Lawyer</a></li>
+<li class=""><a class="hover:text-white" href="service.html?name=Legal%20Notice&amp;category=Lawyer%20Services">Legal Notice</a></li>
+<li class=""><a class="hover:text-white" href="service.html?name=Contract%20Drafting&amp;category=Lawyer%20Services">Contract Drafting</a></li>
+<li class=""><a class="hover:text-white" href="service.html?name=Legal%20Documentation&amp;category=Lawyer%20Services">Legal Documentation</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-brand-orange font-bold uppercase tracking-wider mb-6 flex justify-between items-center">
+          TOOLS
+          <span class="material-symbols-outlined text-sm lg:hidden">expand_more</span>
+</h4>
+<ul class="space-y-4 text-gray-300 text-sm">
+<li class=""><a class="hover:text-white" href="calculator.html?type=gst">GST Calculator</a></li>
+<li class=""><a class="hover:text-white" href="calculator.html?type=income-tax">Income Tax Calculator</a></li>
+<li class=""><a class="hover:text-white" href="calculator.html?type=sip">SIP Calculator</a></li>
+<li class=""><a class="hover:text-white" href="calculator.html?type=tds">TDS Calculator</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-brand-orange font-bold uppercase tracking-wider mb-6 flex justify-between items-center">
+          CALCULATORS
+          <span class="material-symbols-outlined text-sm lg:hidden">expand_more</span>
+</h4>
+<ul class="space-y-4 text-gray-300 text-sm">
+<li class=""><a class="hover:text-white" href="calculator.html?type=business-loan-emi">Business Loan EMI</a></li>
+<li class=""><a class="hover:text-white" href="calculator.html?type=personal-loan-emi">Personal Loan EMI</a></li>
+</ul>
+</div>
+</div>
+<!-- See More Button -->
+<div class="mb-16">
+<button class="w-full border border-brand-orange text-brand-orange py-3 rounded-full hover:bg-brand-orange hover:text-white transition duration-300">
+        See More
+      </button>
+</div>
+<!-- Middle Section: Logo & Info -->
+<div class="text-center mb-12" id="about">
+<div class="flex justify-center items-center mb-6">
+<a class="inline-flex bg-white rounded-xl px-4 py-2" href="index.html#home">
+<img alt="Vyaptum Advisory" class="h-10 w-auto" src="img/brand/logo.jpeg"/>
+</a>
+</div>
+<p class="text-gray-300 max-w-2xl mx-auto mb-4">
+        68, Ground Floor, Institutional Area, Sector 32, Gurugram, Haryana 122001
+      </p>
+<a class="text-brand-orange hover:underline flex items-center justify-center" href="https://www.google.com/maps/search/?api=1&amp;query=68%2C+Ground+Floor%2C+Institutional+Area%2C+Sector+32%2C+Gurugram%2C+Haryana+122001" target="_blank" rel="noopener">
+        Open on Google Maps <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+</a>
+<!-- Social Icons -->
+<div class="flex justify-center space-x-6 mt-8">
+<a aria-label="Facebook" class="text-white hover:text-brand-orange" href="#"><svg class="w-6 h-6" fill="currentColor" viewbox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path></svg></a>
+<a aria-label="Instagram" class="text-white hover:text-brand-orange" href="#"><svg class="w-6 h-6" fill="currentColor" viewbox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path></svg></a>
+<a aria-label="LinkedIn" class="text-white hover:text-brand-orange" href="#"><svg class="w-6 h-6" fill="currentColor" viewbox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"></path></svg></a>
+<a aria-label="YouTube" class="text-white hover:text-brand-orange" href="#"><svg class="w-6 h-6" fill="currentColor" viewbox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"></path></svg></a>
+</div>
+</div>
+<!-- Bottom Navigation -->
+<div class="flex flex-col items-center space-y-8 mb-12">
+<div class="flex flex-wrap justify-center gap-8 text-gray-300">
+<a class="hover:text-white" href="#about">About Us</a>
+<a class="hover:text-white" href="#">Blog</a>
+<a class="hover:text-white" href="#">Guides</a>
+</div>
+<div class="text-center">
+<p class="text-brand-orange font-bold mb-2">Have questions?</p>
+<a class="text-white hover:underline" href="https://wa.me/919204387707?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener">Contact Us</a>
+</div>
+<div class="text-center">
+<p class="text-brand-orange font-bold mb-6">Download the App</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="bg-black border border-white/20 rounded-xl px-6 py-2 flex items-center space-x-3 hover:bg-gray-900 transition" href="#">
+<svg class="h-7 w-7 flex-shrink-0" fill="currentColor" viewbox="0 0 16 16"><path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.469.347-.79.505-1.217.478-1.271Z"></path></svg>
+<div class="text-left">
+<p class="text-[10px] uppercase leading-none">Download on the</p>
+<p class="text-lg font-bold leading-none">App Store</p>
+</div>
+</a>
+<a class="bg-black border border-white/20 rounded-xl px-6 py-2 flex items-center space-x-3 hover:bg-gray-900 transition" href="#">
+<svg class="h-7 w-7 flex-shrink-0" fill="currentColor" viewbox="0 0 24 24"><path d="M4 3a1 1 0 0 1 1.5-.866l14 8a1 1 0 0 1 0 1.732l-14 8A1 1 0 0 1 4 19V3z"></path></svg>
+<div class="text-left">
+<p class="text-[10px] uppercase leading-none">Get it on</p>
+<p class="text-lg font-bold leading-none">Google Play</p>
+</div>
+</a>
+</div>
+</div>
+</div>
+<!-- Disclaimer -->
+<div class="border-t border-white/10 pt-8">
+<p class="text-xs text-gray-500 text-center leading-relaxed max-w-5xl mx-auto">
+        Please note that we are a facilitating platform enabling access to reliable professionals. We are not a law firm and do not provide legal services ourselves. The information on this website is for the purpose of knowledge only and should not be relied upon as legal advice or opinion.
+      </p>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+<script>
+    (function () {
+      var menuBtn = document.getElementById('mobileMenuBtn');
+      var closeBtn = document.getElementById('mobileMenuClose');
+      var overlay = document.getElementById('mobileMenuOverlay');
+      var menu = document.getElementById('mobileMenu');
+
+      function openMenu() {
+        overlay.classList.remove('hidden');
+        menu.classList.remove('translate-x-full');
+        menu.setAttribute('aria-hidden', 'false');
+        menuBtn.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('overflow-hidden');
+      }
+
+      function closeMenu() {
+        overlay.classList.add('hidden');
+        menu.classList.add('translate-x-full');
+        menu.setAttribute('aria-hidden', 'true');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('overflow-hidden');
+      }
+
+      menuBtn.addEventListener('click', openMenu);
+      closeBtn.addEventListener('click', closeMenu);
+      overlay.addEventListener('click', closeMenu);
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      menu.querySelectorAll('.mobile-accordion-trigger').forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var panel = trigger.nextElementSibling;
+          var icon = trigger.querySelector('svg');
+          panel.classList.toggle('hidden');
+          icon.classList.toggle('rotate-90');
+        });
+      });
+    })();
+  </script>
+<script>
+    (function () {
+      // Desktop-only: no-op on touch devices / narrow viewports, mobile is untouched.
+      var isDesktopInteractive = window.matchMedia('(hover: hover) and (pointer: fine) and (min-width: 1024px)').matches;
+      if (!isDesktopInteractive) return;
+
+      var maxTilt = 8;
+      document.querySelectorAll('.tilt-card').forEach(function (card) {
+        card.addEventListener('mouseenter', function () {
+          card.classList.add('is-tilting');
+        });
+        card.addEventListener('mousemove', function (e) {
+          var rect = card.getBoundingClientRect();
+          var x = (e.clientX - rect.left) / rect.width;
+          var y = (e.clientY - rect.top) / rect.height;
+          var rotateY = (x - 0.5) * maxTilt * 2;
+          var rotateX = (0.5 - y) * maxTilt * 2;
+          card.style.transform = 'perspective(800px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateY(-4px)';
+        });
+        card.addEventListener('mouseleave', function () {
+          card.classList.remove('is-tilting');
+          card.style.transform = '';
+        });
+      });
+    })();
+  </script>
+</body></html>
