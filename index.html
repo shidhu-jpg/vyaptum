@@ -74,6 +74,17 @@
       background-repeat: no-repeat, no-repeat, no-repeat, repeat;
       background-size: auto, auto, auto, 36px 36px;
     }
+    /* Desktop only: the browser hero photo already carries its own
+       headline/copy, so it replaces the pattern background and the
+       separate H1 text block is hidden at this breakpoint (see lg:hidden
+       above). Mobile below 1024px is untouched. */
+    @media (min-width: 1024px) {
+      #home {
+        background-image: url('img/hero/browserheroimage.png');
+        background-size: cover;
+        background-position: center;
+      }
+    }
   </style>
 </head>
 <body class="antialiased text-gray-800">
@@ -209,10 +220,9 @@
 <header class="pt-16 pb-24 relative overflow-hidden hero-pattern" id="home">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 <img alt="Vyaptum Advisory Hero" class="w-full rounded-2xl shadow-xl mb-12 lg:hidden" src="img/whychooseus/hero.jpeg"/>
-<img alt="Vyaptum Advisory Hero" class="hidden lg:block w-full rounded-2xl shadow-xl mb-12" src="img/hero/browserheroimage.png"/>
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 <!-- Hero Content -->
-<div>
+<div class="lg:hidden">
 <h1 class="text-4xl sm:text-5xl font-extrabold text-brand-navy leading-tight">
               Private Limited Company Registration
             </h1>
