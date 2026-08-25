@@ -74,19 +74,6 @@
       background-repeat: no-repeat, no-repeat, no-repeat, repeat;
       background-size: auto, auto, auto, 36px 36px;
     }
-    /* Desktop only: the browser hero photo already carries its own
-       headline/copy, so it replaces the pattern background and the
-       separate H1 text block is hidden at this breakpoint (see lg:hidden
-       above). Mobile below 1024px is untouched. */
-    @media (min-width: 1024px) {
-      #home {
-        background-image: url('img/hero/browserheroimage.png');
-        background-size: cover;
-        background-position: center;
-        aspect-ratio: 1721 / 802;
-        padding: 0;
-      }
-    }
   </style>
 </head>
 <body class="antialiased text-gray-800">
@@ -222,9 +209,10 @@
 <header class="pt-16 pb-24 relative overflow-hidden hero-pattern" id="home">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 <img alt="Vyaptum Advisory Hero" class="w-full rounded-2xl shadow-xl mb-12 lg:hidden" src="img/whychooseus/hero.jpeg"/>
+<img alt="Vyaptum Advisory Hero" class="hidden lg:block w-full rounded-2xl shadow-xl mb-12" src="img/hero/browserheroimage.png"/>
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 <!-- Hero Content -->
-<div class="lg:hidden">
+<div>
 <h1 class="text-4xl sm:text-5xl font-extrabold text-brand-navy leading-tight">
               Private Limited Company Registration
             </h1>
@@ -247,7 +235,7 @@
 </ul>
 </div>
 <!-- Registration Form -->
-<div class="lg:hidden bg-brand-navy p-8 rounded-2xl shadow-2xl relative" id="contact">
+<div class="bg-brand-navy p-8 rounded-2xl shadow-2xl relative" id="contact">
 <div class="text-center mb-6">
 <h3 class="text-xl font-bold text-white leading-tight">
               Submit your Details to get an Instant <span class="text-brand-orange">All-inclusive</span> Quote to your email and a <span class="text-brand-orange">FREE</span> Expert consultation
