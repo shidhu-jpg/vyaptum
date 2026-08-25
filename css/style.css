@@ -3,18 +3,18 @@
    ============================================ */
 
 :root{
-  --navy-950:#050f2b;
-  --navy-900:#0c1f57;
-  --navy-800:#123a8f;
-  --navy-700:#1a4fd6;
-  --navy-600:#2f6bff;
-  --gold-600:#d15a06;
-  --gold-500:#ff7a29;
-  --gold-400:#ffab6e;
-  --gold-100:#fff1e5;
+  --navy-950:#1e0a35;
+  --navy-900:#3f1d63;
+  --navy-800:#55298c;
+  --navy-700:#6d38b0;
+  --navy-600:#8452c9;
+  --gold-600:#a85f08;
+  --gold-500:#c8720a;
+  --gold-400:#d9924a;
+  --gold-100:#fbf1e3;
   --cream:#f5f8ff;
   --white:#ffffff;
-  --ink:#0b1730;
+  --ink:#170f28;
   --gray-700:#3d4552;
   --gray-600:#5b6472;
   --gray-400:#8b93a3;
@@ -279,7 +279,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.15;col
 /* ---------- Hero trust badge ---------- */
 .hero-trust-badge{
   display:inline-flex;align-items:center;gap:12px;
-  background:#eef3ff;border-radius:999px;padding:8px 20px 8px 8px;
+  background:#f1eaf8;border-radius:999px;padding:8px 20px 8px 8px;
   margin-bottom:26px;
 }
 .hero-trust-badge-icon{
