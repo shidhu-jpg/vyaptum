@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Services - Vyaptum Advisory</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#3f1d63',
+              orange: '#c8720a',
+              orangeDark: '#a85f08',
+              light: '#faf7f2',
+              surface: '#ffffff'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Fraunces', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style data-purpose="custom-utilities">
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #faf7f2;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Fraunces', serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    [id] {
+      scroll-margin-top: 96px;
+    }
+  </style>
+</head>
+<body class="antialiased text-gray-800">
+<!-- BEGIN: Navigation -->
+<nav class="bg-white shadow-sm sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-20">
+<div class="flex items-center">
+<a class="flex-shrink-0 flex items-center" href="index.html#home">
+<img alt="Vyaptum Advisory" class="h-9 w-auto" src="img/brand/logo.jpeg"/>
+</a>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-brand-navy font-semibold" href="services.html">Services</a>
+<a class="text-gray-600 hover:text-brand-navy font-medium" href="service.html?name=ROC%20Compliance&amp;category=Compliance">Compliance</a>
+<a class="text-gray-600 hover:text-brand-navy font-medium" href="service.html?name=GST%20Return&amp;category=Compliance">Tax</a>
+<a class="text-gray-600 hover:text-brand-navy font-medium" href="#about">About</a>
+<a class="text-gray-600 hover:text-brand-navy font-medium" href="index.html#contact">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<a class="hidden md:inline-block bg-brand-orange text-white px-6 py-2 rounded-md font-semibold hover:bg-brand-orangeDark transition duration-300" href="index.html#contact">Start Now</a>
+<button aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu" class="md:hidden flex items-center justify-center w-10 h-10 text-brand-navy" id="mobileMenuBtn" type="button">
+<svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<!-- END: Navigation -->
+<!-- BEGIN: Mobile Menu Drawer -->
+<div class="fixed inset-0 bg-black/40 z-[60] hidden" id="mobileMenuOverlay"></div>
+<div aria-hidden="true" class="fixed inset-y-0 right-0 w-full max-w-sm bg-white z-[70] translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto" id="mobileMenu">
+<div class="flex justify-end items-center px-4 h-16 border-b border-gray-100">
+<button aria-label="Close menu" class="flex items-center justify-center w-10 h-10 text-brand-navy" id="mobileMenuClose" type="button">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+</div>
+<div class="px-2">
+<!-- Registrations -->
+<div class="border-b border-gray-100">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+            Registrations
+            <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<div class="hidden mobile-accordion-panel px-3 pb-4 space-y-3">
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Private%20Limited%20Company&amp;category=Registrations">Private Limited Company</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Public%20Limited%20Company&amp;category=Registrations">Public Limited Company</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Partnership&amp;category=Registrations">Partnership</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=One%20Person%20Company&amp;category=Registrations">One Person Company</a>
+</div>
+</div>
+<!-- Compliance -->
+<div class="border-b border-gray-100">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+            Compliance
+            <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<div class="hidden mobile-accordion-panel px-3 pb-4 space-y-3">
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Annual%20Filing&amp;category=Compliance">Annual Filing</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=GST%20Return&amp;category=Compliance">GST Return</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Income%20Tax%20Return&amp;category=Compliance">Income Tax Return</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=ROC%20Compliance&amp;category=Compliance">ROC Compliance</a>
+</div>
+</div>
+<!-- IPR -->
+<div class="border-b border-gray-100">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+            IPR
+            <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<div class="hidden mobile-accordion-panel px-3 pb-4 space-y-3">
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Trademark%20Registration&amp;category=IPR">Trademark Registration</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Patent%20Registration&amp;category=IPR">Patent Registration</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Copyright%20Registration&amp;category=IPR">Copyright Registration</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Design%20Registration&amp;category=IPR">Design Registration</a>
+</div>
+</div>
+<!-- Lawyer Services -->
+<div class="border-b border-gray-100">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+            Lawyer Services
+            <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<div class="hidden mobile-accordion-panel px-3 pb-4 space-y-3">
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Talk%20to%20a%20Lawyer&amp;category=Lawyer%20Services">Talk to a Lawyer</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Legal%20Notice&amp;category=Lawyer%20Services">Legal Notice</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Contract%20Drafting&amp;category=Lawyer%20Services">Contract Drafting</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="service.html?name=Legal%20Documentation&amp;category=Lawyer%20Services">Legal Documentation</a>
+</div>
+</div>
+<!-- Calculators -->
+<div class="border-b border-gray-100">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+            Calculators
+            <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<div class="hidden mobile-accordion-panel px-3 pb-4 space-y-3">
+<a class="block text-gray-600 hover:text-brand-orange" href="calculator.html?type=gst">GST Calculator</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="calculator.html?type=income-tax">Income Tax Calculator</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="calculator.html?type=sip">SIP Calculator</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="calculator.html?type=tds">TDS Calculator</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="calculator.html?type=business-loan-emi">Business Loan EMI</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="calculator.html?type=personal-loan-emi">Personal Loan EMI</a>
+</div>
+</div>
+<!-- Taxation -->
+<a class="block py-5 px-3 font-bold text-brand-navy border-b border-gray-100" href="service.html?name=GST%20Return&amp;category=Compliance">Taxation</a>
+<!-- Consultation -->
+<a class="block py-5 px-3 font-bold text-brand-navy border-b border-gray-100" href="https://wa.me/919204387707?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20consultation." rel="noopener" target="_blank">Consultation</a>
+<!-- More -->
+<div class="border-b border-gray-100">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+            More
+            <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<div class="hidden mobile-accordion-panel px-3 pb-4 space-y-3">
+<a class="block text-gray-600 hover:text-brand-orange" href="index.html#home">Home</a>
+<a class="block text-gray-600 hover:text-brand-orange" href="#about">About</a>
+</div>
+</div>
+<!-- Contact Us -->
+<a class="block py-5 px-3 font-bold text-brand-navy border-b border-gray-100" href="https://wa.me/919204387707?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services." rel="noopener" target="_blank">Contact Us</a>
+</div>
+<div class="p-4">
+<a class="w-full flex items-center justify-center gap-2 bg-brand-orange text-white font-semibold py-4 rounded-full hover:bg-brand-orangeDark transition duration-300" href="https://wa.me/919204387707?text=Hi%2C%20I%27d%20like%20to%20talk%20to%20an%20expert." rel="noopener" target="_blank">
+<svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C10 9.4 9.5 8 9.3 7.6c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"></path><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.4C8.4 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.7 0-3.3-.5-4.6-1.3l-.3-.2-3.3.9.9-3.2-.2-.3C3.5 14.5 3 13 3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9z"></path></svg>
+          Talk to Experts
+        </a>
+</div>
+</div>
+<!-- END: Mobile Menu Drawer -->
+
+<!-- BEGIN: Page Header -->
+<header class="pt-14 pb-10 bg-white border-b border-gray-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h1 class="text-3xl md:text-4xl font-extrabold text-brand-navy">Our <span class="text-brand-orange">Services</span></h1>
+<p class="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">Everything you need to register, stay compliant, and protect your business &mdash; browse by category or talk to an expert directly.</p>
+</div>
+</header>
+<!-- END: Page Header -->
+
+<!-- BEGIN: Services Directory -->
+<section class="py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+
+<!-- Registrations -->
+<div>
+<h2 class="text-2xl font-bold text-brand-navy mb-6">Registrations</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<a class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition block" href="service.html?name=Private%20Limited%20Company&amp;category=Registrations">
+<h3 class="font-bold text-brand-navy mb-2">Private Limited Company</h3>
+<p class="text-sm text-gray-600">Register a private limited company with limited liability protection for owners.</p>
+</a>
+<a class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition block" href="service.html?name=Public%20Limited%20Company&amp;category=Registrations">
+<h3 class="font-bold text-brand-navy mb-2">Public Limited Company</h3>
+<p class="text-sm text-gray-600">Set up a public limited company structure built for larger-scale fundraising.</p>
+</a>
+<a class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition block" href="service.html?name=Partnership&amp;category=Registrations">
+<h3 class="font-bold text-brand-navy mb-2">Partnership</h3>
+<p class="text-sm text-gray-600">Formalize a partnership firm between two or more owners.</p>
+</a>
+<a class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition block" href="service.html?name=One%20Person%20Company&amp;category=Registrations">
+<h3 class="font-bold text-brand-navy mb-2">One Person Company</h3>
+<p class="text-sm text-gray-600">Register a company with a single owner and limited liability.</p>
+</a>
+</div>
+</div>
+
+<!-- Compliance -->
+<div>
+<h2 class="text-2xl font-bold text-brand-navy mb-6">Compliance</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<a class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition block" href="service.html?name=Annual%20Filing&amp;category=Compliance">
+<h3 class="font-bold text-brand-navy mb-2">Annual Filing</h3>
+<p class="text-sm text-gray-600">Stay compliant with your company's yearly ROC filing requirements.</p>
+</a>
+<a class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition block" href="service.html?name=GST%20Return&amp;category=Compliance">
+<h3 class="font-bold text-brand-navy mb-2">GST Return</h3>
+<p class="text-sm text-gray-600">File your monthly, quarterly or annual GST returns on time.</p>
+</a>
+<a class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition block" href="service.html?name=Income%20Tax%20Return&amp;category=Compliance">
+<h3 class="font-bold text-brand-navy mb-2">Income Tax Return</h3>
+<p class="text-sm text-gray-600">File accurate income tax returns for individuals and businesses.</p>
+</a>
+<a class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition block" href="service.html?name=ROC%20Compliance&amp;category=Compliance">
+<h3 class="font-bold text-brand-navy mb-2">ROC Compliance</h3>
+<p class="text-sm text-gray-600">Meet ongoing Registrar of Companies compliance obligations.</p>
+</a>
+</div>
+</div>
+
+<!-- IPR -->
+<div>
+<h2 class="text-2xl font-bold text-brand-navy mb-6">IPR</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<a class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition block" href="service.html?name=Trademark%20Registration&amp;category=IPR">
+<h3 class="font-bold text-brand-navy mb-2">Trademark Registration</h3>
+<p class="text-sm text-gray-600">Protect your brand name and logo with a registered trademark.</p>
+</a>
+<a class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition block" href="service.html?name=Patent%20Registration&amp;category=IPR">
+<h3 class="font-bold text-brand-navy mb-2">Patent Registration</h3>
+<p class="text-sm text-gray-600">Secure legal protection for your invention or innovation.</p>
+</a>
+<a class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition block" href="service.html?name=Copyright%20Registration&amp;category=IPR">
+<h3 class="font-bold text-brand-navy mb-2">Copyright Registration</h3>
+<p class="text-sm text-gray-600">Register copyright for your original creative work.</p>
+</a>
+<a class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition block" href="service.html?name=Design%20Registration&amp;category=IPR">
+<h3 class="font-bold text-brand-navy mb-2">Design Registration</h3>
+<p class="text-sm text-gray-600">Protect the unique visual design of your product.</p>
+</a>
+</div>
+</div>
+
+<!-- Lawyer Services -->
+<div>
+<h2 class="text-2xl font-bold text-brand-navy mb-6">Lawyer Services</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<a class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition block" href="service.html?name=Talk%20to%20a%20Lawyer&amp;category=Lawyer%20Services">
+<h3 class="font-bold text-brand-navy mb-2">Talk to a Lawyer</h3>
+<p class="text-sm text-gray-600">Get on-call legal advice from an experienced lawyer.</p>
+</a>
+<a class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition block" href="service.html?name=Legal%20Notice&amp;category=Lawyer%20Services">
+<h3 class="font-bold text-brand-navy mb-2">Legal Notice</h3>
+<p class="text-sm text-gray-600">Draft and send a formal legal notice.</p>
+</a>
+<a class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition block" href="service.html?name=Contract%20Drafting&amp;category=Lawyer%20Services">
+<h3 class="font-bold text-brand-navy mb-2">Contract Drafting</h3>
+<p class="text-sm text-gray-600">Get contracts and agreements drafted by legal experts.</p>
+</a>
+<a class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition block" href="service.html?name=Legal%20Documentation&amp;category=Lawyer%20Services">
+<h3 class="font-bold text-brand-navy mb-2">Legal Documentation</h3>
+<p class="text-sm text-gray-600">Prepare accurate legal documents for your business needs.</p>
+</a>
+</div>
+</div>
+
+</div>
+</section>
+<!-- END: Services Directory -->
+
+<!-- BEGIN: Footer -->
+<footer class="bg-brand-navy text-white pt-20 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Middle Section: Logo & Info -->
+<div class="text-center mb-12" id="about">
+<div class="flex justify-center items-center mb-6">
+<a class="inline-flex bg-white rounded-xl px-4 py-2" href="index.html#home">
+<img alt="Vyaptum Advisory" class="h-10 w-auto" src="img/brand/logo.jpeg"/>
+</a>
+</div>
+<p class="text-gray-300 max-w-2xl mx-auto mb-4">
+        68, Ground Floor, Institutional Area, Sector 32, Gurugram, Haryana 122001
+      </p>
+<a class="text-brand-orange hover:underline flex items-center justify-center" href="https://www.google.com/maps/search/?api=1&amp;query=68%2C+Ground+Floor%2C+Institutional+Area%2C+Sector+32%2C+Gurugram%2C+Haryana+122001" target="_blank" rel="noopener">
+        Open on Google Maps <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+</a>
+</div>
+<p class="text-gray-300 text-center">
+<a class="hover:text-white" href="index.html">Home</a> &middot;
+      <a class="hover:text-white" href="services.html">Services</a> &middot;
+      <a class="hover:text-white" href="https://wa.me/919204387707?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener">Contact</a>
+</p>
+<!-- Disclaimer -->
+<div class="border-t border-white/10 pt-8 mt-8">
+<p class="text-xs text-gray-500 text-center leading-relaxed max-w-5xl mx-auto">
+        Please note that we are a facilitating platform enabling access to reliable professionals. We are not a law firm and do not provide legal services ourselves. The information on this website is for the purpose of knowledge only and should not be relied upon as legal advice or opinion.
+      </p>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+
+<script>
+    (function () {
+      var menuBtn = document.getElementById('mobileMenuBtn');
+      var closeBtn = document.getElementById('mobileMenuClose');
+      var overlay = document.getElementById('mobileMenuOverlay');
+      var menu = document.getElementById('mobileMenu');
+
+      function openMenu() {
+        overlay.classList.remove('hidden');
+        menu.classList.remove('translate-x-full');
+        menu.setAttribute('aria-hidden', 'false');
+        menuBtn.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('overflow-hidden');
+      }
+
+      function closeMenu() {
+        overlay.classList.add('hidden');
+        menu.classList.add('translate-x-full');
+        menu.setAttribute('aria-hidden', 'true');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('overflow-hidden');
+      }
+
+      menuBtn.addEventListener('click', openMenu);
+      closeBtn.addEventListener('click', closeMenu);
+      overlay.addEventListener('click', closeMenu);
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      menu.querySelectorAll('.mobile-accordion-trigger').forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var panel = trigger.nextElementSibling;
+          var icon = trigger.querySelector('svg');
+          panel.classList.toggle('hidden');
+          icon.classList.toggle('rotate-90');
+        });
+      });
+    })();
+  </script>
+</body></html>
