@@ -1,0 +1,3 @@
+# Local AI assistant config — holds your private Google/Gemini API key.
+# Never commit this. Use ai-config.example.js as the template.
+ai-config.js
