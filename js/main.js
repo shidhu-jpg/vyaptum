@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ---------- WhatsApp "Talk to Experts" link (global CTA) ---------- */
-  const WHATSAPP_NUMBER = '919204387707';
+  const WHATSAPP_NUMBER = '916209005226';
   const buildWhatsAppLink = (topic) => {
     const text = topic
       ? `Hi, I'd like to know more about ${topic}.`

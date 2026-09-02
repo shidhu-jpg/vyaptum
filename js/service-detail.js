@@ -6,7 +6,7 @@
    ============================================ */
 document.addEventListener('DOMContentLoaded', () => {
 
-  const WHATSAPP_NUMBER = '919204387707';
+  const WHATSAPP_NUMBER = '916209005226';
   const params = new URLSearchParams(window.location.search);
   const serviceName = params.get('name') || 'Our Services';
   const categoryName = params.get('category') || '';
