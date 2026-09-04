@@ -365,6 +365,69 @@
       @keyframes tst-in { from { opacity: 0; transform: translateX(24px); } to { opacity: 1; transform: none; } }
     }
   </style>
+  <style>
+    /* Home page reference styling */
+    :root { --reference-blue: #0d55bd; --reference-navy: #10233f; --reference-pale: #f4f8ff; --reference-line: #dce7f6; --reference-text: #4c5c71; }
+    body { background: var(--reference-pale); color: var(--reference-navy); }
+    #siteNav { background: rgba(255, 255, 255, .96); box-shadow: 0 1px 0 var(--reference-line); }
+    #siteNav .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    #siteNav .nav-logo { height: 42px; }
+    #siteNav .nav-link { color: var(--reference-navy); font-size: .78rem; }
+    #siteNav .nav-link::after { background: var(--reference-blue); }
+    #siteNav .btn-glow { background: var(--reference-blue); border-radius: 5px; padding: 10px 18px; font-size: .75rem; }
+    #home { background: linear-gradient(145deg, #f8fbff 0%, #eef5ff 63%, #dceaff 100%); }
+    #home .hero-browser-bg { display: block; width: 100%; height: max(675px, 53.5vw); background-image: url('img/brand/newhero.jpeg'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat; animation: none !important; }
+    #home > .max-w-7xl { position: absolute; inset: 0; max-width: 1200px; height: 100%; padding-top: 7%; padding-bottom: 4%; pointer-events: none; }
+    #home > .max-w-7xl > img, #home .grid > div:first-child { display: none; }
+    #home .grid { display: block; }
+    #home .grid > div:last-child { width: min(31%, 365px); margin-left: auto; background: #fff; border: 1px solid var(--reference-line); border-radius: 8px; padding: clamp(14px, 1.7vw, 22px); box-shadow: 0 18px 45px rgba(38, 82, 139, .16); pointer-events: auto; }
+    #home .grid > div:last-child h3 { color: var(--reference-navy); font-family: 'Inter', sans-serif; font-size: 1.2rem; }
+    #home .grid > div:last-child h3 span { color: var(--reference-blue); }
+    #home .grid > div:last-child input, #home .grid > div:last-child select { background: #fff; border-color: var(--reference-line); color: var(--reference-navy); border-radius: 4px; }
+    #home .grid > div:last-child input::placeholder { color: #8694a7; }
+    #home .grid > div:last-child button { background: var(--reference-blue); border-radius: 4px; font-size: .9rem; padding: 13px 16px; }
+    #home .grid > div:last-child > div:last-child { border: 1px solid var(--reference-line); padding: 12px; }
+    #home .grid > div:last-child > div:last-child p { color: var(--reference-navy); }
+    #home + section { background: #fff; }
+    #home + section .fact-value { color: var(--reference-blue); font-family: 'Inter', sans-serif; font-weight: 800; }
+    .marquee { background: #f1f6fd !important; }
+    .marquee__item { color: var(--reference-blue); }
+    .legacy-home-section { display: none; }
+    .ref-solutions, .ref-process { background: #fff; }
+    .ref-why { background: #f1f6fd; }
+    .ref-shell { max-width: 1120px; margin: 0 auto; padding: 52px 24px; }
+    .ref-heading { text-align: center; margin: 0 auto 28px; }
+    .ref-heading > span, .ref-why-copy > span { color: var(--reference-blue); font-size: .58rem; font-weight: 800; letter-spacing: 1.2px; }
+    .ref-heading h2, .ref-why-copy h2 { margin: 7px 0 5px; color: var(--reference-navy); font-family: 'Inter', sans-serif; font-size: 1.4rem; font-weight: 800; }
+    .ref-heading p { color: var(--reference-text); font-size: .75rem; }
+    .ref-solution-grid, .ref-process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .ref-solution-card { min-height: 168px; padding: 18px 14px; border: 1px solid var(--reference-line); border-radius: 5px; background: #fff; text-align: center; box-shadow: 0 5px 15px rgba(38, 82, 139, .04); transition: transform .25s ease, box-shadow .25s ease; }
+    .ref-solution-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(38, 82, 139, .12); }
+    .ref-solution-card img, .ref-process-step img { width: 46px; height: 46px; margin: 0 auto 10px; object-fit: contain; }
+    .ref-solution-card strong, .ref-process-step strong { display: block; color: var(--reference-navy); font-size: .75rem; }
+    .ref-solution-card p, .ref-process-step p { margin-top: 5px; color: var(--reference-text); font-size: .63rem; line-height: 1.5; }
+    .ref-why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: center; }
+    .ref-why-image { width: 100%; height: 240px; border-radius: 4px; object-fit: cover; }
+    .ref-why-copy h2 { font-size: 1.7rem; line-height: 1.12; max-width: 300px; }
+    .ref-why-copy ul { display: grid; gap: 7px; margin: 18px 0; }
+    .ref-why-copy li { color: var(--reference-text); font-size: .72rem; }
+    .ref-why-copy li::before { content: '✓'; margin-right: 8px; color: var(--reference-blue); font-weight: 800; }
+    .ref-button { display: inline-flex; padding: 8px 14px; border-radius: 3px; background: var(--reference-blue); color: #fff; font-size: .66rem; font-weight: 700; }
+    .ref-process-step { position: relative; text-align: center; }
+    .ref-process-step:not(:last-child)::after { content: ''; position: absolute; top: 27px; left: calc(50% + 35px); width: calc(100% - 70px); border-top: 1px dashed #b9cceb; }
+    @media (max-width: 767px) {
+      #siteNav .nav-inner { padding: 0 16px; }
+      #siteNav .nav-logo { height: 35px; }
+      #home .hero-browser-bg { height: 230px; background-size: cover; background-position: 34% center; }
+      #home > .max-w-7xl { position: relative; inset: auto; height: auto; padding-top: 24px; padding-bottom: 44px; }
+      #home .grid > div:last-child { width: auto; margin-left: 0; padding: 18px; }
+      .ref-shell { padding: 38px 18px; }
+      .ref-solution-grid, .ref-process-grid { grid-template-columns: repeat(2, 1fr); }
+      .ref-why-grid { grid-template-columns: 1fr; gap: 24px; }
+      .ref-why-image { height: 210px; }
+      .ref-process-step:not(:last-child)::after { display: none; }
+    }
+  </style>
 </head>
 <body class="antialiased text-gray-800">
 <div id="scrollProgress"></div>
@@ -486,51 +549,22 @@
 <a class="block py-5 px-3 font-bold text-brand-navy border-b border-gray-100" href="service.html?name=GST%20Return&amp;category=Compliance">Taxation</a>
 <!-- Consultation -->
 <a class="block py-5 px-3 font-bold text-brand-navy border-b border-gray-100" href="https://wa.me/916209005226?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20consultation." rel="noopener" target="_blank">Consultation</a>
-<!-- More -->
-<div class="border-b border-gray-100">
-<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
-            More
-            <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-</button>
-<div class="hidden mobile-accordion-panel px-3 pb-4 space-y-3">
-<a class="block text-gray-600 hover:text-brand-orange" href="index.html#home">Home</a>
-<a class="block text-gray-600 hover:text-brand-orange" href="#about">About</a>
-</div>
-</div>
-<!-- Contact Us -->
-<a class="block py-5 px-3 font-bold text-brand-navy border-b border-gray-100" href="https://wa.me/916209005226?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services." rel="noopener" target="_blank">Contact Us</a>
-</div>
-<div class="p-4">
-<a class="w-full flex items-center justify-center gap-2 bg-brand-orange text-white font-semibold py-4 rounded-full hover:bg-brand-orangeDark transition duration-300" href="https://wa.me/916209005226?text=Hi%2C%20I%27d%20like%20to%20talk%20to%20an%20expert." rel="noopener" target="_blank">
-<svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C10 9.4 9.5 8 9.3 7.6c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"></path><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.4C8.4 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.7 0-3.3-.5-4.6-1.3l-.3-.2-3.3.9.9-3.2-.2-.3C3.5 14.5 3 13 3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9z"></path></svg>
-          Talk to Experts
-        </a>
-</div>
-</div>
 <!-- END: Mobile Menu Drawer -->
+</div>
+</div>
 <!-- BEGIN: Hero Section -->
 <header class="relative overflow-hidden hero-pattern" id="home">
 <div aria-label="Vyaptum Advisory Hero" class="hidden lg:block w-full hero-browser-bg" role="img"></div>
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16 pb-24">
-<img alt="Vyaptum Advisory Hero" class="w-full rounded-2xl shadow-xl mb-12 lg:hidden" src="img/whychooseus/hero.jpeg"/>
+<img alt="Vyaptum Advisory Hero" class="w-full rounded-2xl shadow-xl mb-12 lg:hidden" src="img/brand/newhero.jpeg"/>
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-<!-- Hero Content -->
 <div>
-<h1 class="hero-anim d1 text-4xl sm:text-5xl font-extrabold text-brand-navy leading-tight">
-              Private Limited Company Registration
-            </h1>
-<p class="hero-anim d2 mt-4 text-xl text-gray-700 font-medium">
-              Get your Private Limited Company Registration in just <span class="text-brand-navy font-bold">7 days</span> at <span class="pulse-once inline-block text-brand-orange font-bold">Rs.1,999/-</span> only.
-            </p>
+<h1 class="hero-anim d1 text-4xl sm:text-5xl font-extrabold text-brand-navy leading-tight">Private Limited Company Registration</h1>
+<p class="hero-anim d2 mt-4 text-xl text-gray-700 font-medium">Get your Private Limited Company Registration in just <span class="text-brand-navy font-bold">7 days</span> at <span class="pulse-once inline-block text-brand-orange font-bold">Rs.1,999/-</span> only.</p>
 <ul class="hero-anim d3 mt-6 space-y-3">
-<li class="flex items-center text-gray-700">
-<svg class="h-6 w-6 text-brand-orange mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                2 DIN and DSC for two Directors
-              </li>
-<li class="flex items-center text-gray-700">
-<svg class="h-6 w-6 text-brand-orange mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                Drafting of MoA &amp; AoA
-              </li>
+<li class="flex items-center text-gray-700"><svg class="h-6 w-6 text-brand-orange mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>2 DIN and DSC for two Directors</li>
+<li class="flex items-center text-gray-700"><svg class="h-6 w-6 text-brand-orange mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>Drafting of MoA &amp; AoA</li>
+<!-- More -->
 <li class="flex items-center text-gray-700">
 <svg class="h-6 w-6 text-brand-orange mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
                 Registration fees and stamp duty
@@ -623,7 +657,7 @@
 </header>
 <!-- END: Hero Section -->
 <!-- BEGIN: Facts + Marquee Strip -->
-<section class="bg-white border-b border-gray-100">
+<section class="legacy-home-section bg-white border-b border-gray-100">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 <div class="reveal grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
 <div>
@@ -667,7 +701,7 @@
 </section>
 <!-- END: Facts + Marquee Strip -->
 <!-- BEGIN: Benefits Section -->
-<section class="py-20 bg-white">
+<section class="legacy-home-section py-20 bg-white">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="reveal text-center mb-16">
 <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy">
@@ -716,7 +750,7 @@
 </section>
 <!-- END: Benefits Section -->
 <!-- BEGIN: Checklist Section -->
-<section class="py-20 bg-brand-light">
+<section class="legacy-home-section py-20 bg-brand-light">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy mb-4">
         What to keep in mind while Registering a <br/> <span class="text-brand-orange">Private Limited Company Registration?</span>
@@ -745,53 +779,34 @@
 </div>
 </section>
 <!-- END: Checklist Section -->
-<!-- BEGIN: Documents Required Section -->
-<section class="py-20 bg-white">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="reveal text-center mb-16">
-<h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy">
-<span class="head-underline text-brand-orange">Documents</span> required For Private Limited Company Registration
-        </h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<div class="card-lift reveal bg-gray-50 rounded-2xl p-6 text-center shadow-sm">
-<img alt="PAN Card" class="w-full h-auto rounded-xl" src="img/whychooseus/pancard.jpeg"/>
-</div>
-<div class="card-lift reveal bg-gray-50 rounded-2xl p-6 text-center shadow-sm">
-<img alt="Photograph" class="w-full h-auto rounded-xl" src="img/whychooseus/photograph.jpeg"/>
-</div>
-<div class="card-lift reveal bg-gray-50 rounded-2xl p-6 text-center shadow-sm">
-<img alt="Identity Proof" class="w-full h-auto rounded-xl" src="img/whychooseus/identitiyproof.jpeg"/>
-</div>
-<div class="card-lift reveal bg-gray-50 rounded-2xl p-6 text-center shadow-sm">
-<img alt="Address Proof" class="w-full h-auto rounded-xl" src="img/whychooseus/bussinessaddressproff.jpeg"/>
-</div>
+<!-- BEGIN: Reference Homepage Sections -->
+<section class="ref-solutions">
+<div class="ref-shell">
+<div class="ref-heading"><span>OUR SERVICES</span><h2>Expert Solutions for Every Business Need</h2><p>Tailored consulting services to help your business move forward and lead.</p></div>
+<div class="ref-solution-grid">
+<a class="ref-solution-card" href="services.html"><img src="img/why-us/compliant.svg" alt="Strategic consulting"><strong>Strategic Consulting</strong><p>Develop strategies that align growth and create lasting value.</p></a>
+<a class="ref-solution-card" href="services.html"><img src="img/why-us/pricing.svg" alt="Financial solutions"><strong>Financial Solutions</strong><p>Make informed decisions with practical financial guidance.</p></a>
+<a class="ref-solution-card" href="services.html"><img src="img/why-us/support.svg" alt="Operational excellence"><strong>Operational Excellence</strong><p>Improve efficiency, reduce costs, and create momentum.</p></a>
+<a class="ref-solution-card" href="services.html"><img src="img/why-us/turnaround.svg" alt="Change management"><strong>Change Management</strong><p>Move confidently through meaningful business change.</p></a>
 </div>
 </div>
 </section>
-<!-- END: Documents Required Section -->
-<!-- BEGIN: Why Choose Us Section -->
-<section class="py-20 bg-brand-light">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="reveal text-center mb-16">
-<h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy">
-<span class="head-underline text-brand-orange">Why</span> Choose Us
-        </h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-<div class="card-lift reveal bg-white rounded-2xl p-6 text-center shadow-sm">
-<img alt="Fair and Adjusted Pricing" class="w-full h-auto rounded-xl" src="img/whychooseus/fairandadjustedprice.jpeg"/>
-</div>
-<div class="card-lift reveal bg-white rounded-2xl p-6 text-center shadow-sm">
-<img alt="Five Star Rating" class="w-full h-auto rounded-xl" src="img/whychooseus/fivestarrating.jpeg"/>
-</div>
-<div class="card-lift reveal bg-white rounded-2xl p-6 text-center shadow-sm">
-<img alt="Smart Time Management" class="w-full h-auto rounded-xl" src="img/whychooseus/smarttimemanage.jpeg"/>
-</div>
-</div>
+<section class="ref-why">
+<div class="ref-shell ref-why-grid">
+<img class="ref-why-image" src="img/brand/clientmeeting.jpeg" alt="Vyaptum consulting team meeting">
+<div class="ref-why-copy"><span>WHY CHOOSE VYAPTUM</span><h2>Partners in Your Growth Journey</h2><ul><li>Industry experts with deep domain knowledge</li><li>Data-driven approach for smarter decisions</li><li>Customized solutions tailored to your goals</li><li>Commitment to measurable, lasting results</li></ul><a class="ref-button" href="about.html">Learn More About Us</a></div>
 </div>
 </section>
-<!-- END: Why Choose Us Section -->
+<section class="ref-process">
+<div class="ref-shell"><div class="ref-heading"><span>HOW WE WORK</span><h2>Clear Process. Proven Results.</h2></div>
+<div class="ref-process-grid">
+<div class="ref-process-step"><img src="img/process/step1-consultation.svg" alt="Understand"><strong>Understand</strong><p>We listen, research and understand your business.</p></div>
+<div class="ref-process-step"><img src="img/process/step2-documents.svg" alt="Analyze"><strong>Analyze</strong><p>We analyze data and uncover key insights.</p></div>
+<div class="ref-process-step"><img src="img/process/step3-filing.svg" alt="Strategize"><strong>Strategize</strong><p>We design strategies that drive growth.</p></div>
+<div class="ref-process-step"><img src="img/process/step4-approval.svg" alt="Optimize"><strong>Optimize</strong><p>We measure, refine and continuously improve.</p></div>
+</div></div>
+</section>
+<!-- END: Reference Homepage Sections -->
 <!-- BEGIN: Testimonials Section -->
 <section class="py-20 testimonial-pattern relative overflow-hidden font-sans">
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -916,6 +931,25 @@ Placeholder testimonial. Paste a real client review here, then update the name a
 </button>
 <footer class="bg-brand-navy text-white pt-20 pb-8">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Virtual Office Cities -->
+<div class="border-t border-white/10 border-b border-white/10 py-8 mb-12">
+<div class="flex items-center justify-between gap-4 mb-5">
+<h4 class="text-brand-orange font-bold uppercase tracking-wider">Virtual Office in Top Cities</h4>
+<span class="material-symbols-outlined text-brand-orange" aria-hidden="true">expand_less</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4 text-gray-300">
+<a class="hover:text-white transition" href="service.html?name=Virtual%20Office%20in%20Bangalore&amp;category=Business%20Services">Virtual Office in Bangalore</a>
+<a class="hover:text-white transition" href="service.html?name=Virtual%20Office%20in%20Delhi&amp;category=Business%20Services">Virtual Office in Delhi</a>
+<a class="hover:text-white transition" href="service.html?name=Virtual%20Office%20in%20Mumbai&amp;category=Business%20Services">Virtual Office in Mumbai</a>
+<a class="hover:text-white transition" href="service.html?name=Virtual%20Office%20in%20Gurgaon&amp;category=Business%20Services">Virtual Office in Gurgaon</a>
+<a class="hover:text-white transition" href="service.html?name=Virtual%20Office%20in%20Noida&amp;category=Business%20Services">Virtual Office in Noida</a>
+<a class="hover:text-white transition" href="service.html?name=Virtual%20Office%20in%20Ahmedabad&amp;category=Business%20Services">Virtual Office in Ahmedabad</a>
+<a class="hover:text-white transition" href="service.html?name=Virtual%20Office%20in%20Jaipur&amp;category=Business%20Services">Virtual Office in Jaipur</a>
+<a class="hover:text-white transition" href="service.html?name=Virtual%20Office%20in%20Chennai&amp;category=Business%20Services">Virtual Office in Chennai</a>
+<a class="hover:text-white transition" href="service.html?name=Virtual%20Office%20in%20Hyderabad&amp;category=Business%20Services">Virtual Office in Hyderabad</a>
+<a class="hover:text-white transition" href="service.html?name=Virtual%20Office%20in%20Kolkata&amp;category=Business%20Services">Virtual Office in Kolkata</a>
+</div>
+</div>
 <!-- Top Section: Accordion/Columns -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12 border-b border-white/10 pb-12">
 <div>
@@ -1003,7 +1037,7 @@ Placeholder testimonial. Paste a real client review here, then update the name a
 </a>
 </div>
 <p class="text-gray-300 max-w-2xl mx-auto mb-4">
-        Vyaptum Complex, Braham Baba Mandir, Vyaptum Complex, Braham Baba Mandir, Bettiah Road, Areraj, Bihar 845411
+  Vyaptum Complex, Braham Baba Mandir, Bettiah Road, Areraj, Bihar 845411
       </p>
 <a class="text-brand-orange hover:underline flex items-center justify-center" href="https://www.google.com/maps/search/?api=1&amp;query=Vyaptum%20Complex%2C%20Braham%20Baba%20Mandir%2C%20Bettiah%20Road%2C%20Areraj%2C%20Bihar%20845411" target="_blank" rel="noopener">
         Open on Google Maps <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
@@ -1028,31 +1062,18 @@ Placeholder testimonial. Paste a real client review here, then update the name a
 <p class="text-brand-orange font-bold mb-2">Have questions?</p>
 <a class="text-white hover:underline" href="https://wa.me/916209005226?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener">Contact Us</a>
 </div>
-<div class="text-center">
-<p class="text-brand-orange font-bold mb-6">Download the App</p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center">
-<a class="bg-black border border-white/20 rounded-xl px-6 py-2 flex items-center space-x-3 hover:bg-gray-900 transition" href="#">
-<svg class="h-7 w-7 flex-shrink-0" fill="currentColor" viewbox="0 0 16 16"><path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.469.347-.79.505-1.217.478-1.271Z"></path></svg>
-<div class="text-left">
-<p class="text-[10px] uppercase leading-none">Download on the</p>
-<p class="text-lg font-bold leading-none">App Store</p>
 </div>
-</a>
-<a class="bg-black border border-white/20 rounded-xl px-6 py-2 flex items-center space-x-3 hover:bg-gray-900 transition" href="#">
-<svg class="h-7 w-7 flex-shrink-0" fill="currentColor" viewbox="0 0 24 24"><path d="M4 3a1 1 0 0 1 1.5-.866l14 8a1 1 0 0 1 0 1.732l-14 8A1 1 0 0 1 4 19V3z"></path></svg>
-<div class="text-left">
-<p class="text-[10px] uppercase leading-none">Get it on</p>
-<p class="text-lg font-bold leading-none">Google Play</p>
-</div>
-</a>
-</div>
-</div>
+<div class="flex justify-center gap-6 text-sm text-gray-300 mb-8">
+<a class="hover:text-white" href="privacy.html">Privacy Policy</a>
+<a class="hover:text-white" href="terms.html">Terms of Service</a>
 </div>
 <!-- Disclaimer -->
 <div class="border-t border-white/10 pt-8">
 <p class="text-xs text-gray-500 text-center leading-relaxed max-w-5xl mx-auto">
         Please note that we are a facilitating platform enabling access to reliable professionals. We are not a law firm and do not provide legal services ourselves. The information on this website is for the purpose of knowledge only and should not be relied upon as legal advice or opinion.
       </p>
+<p class="mt-6 text-sm text-brand-orange font-semibold text-center">© 2026 - VYAPTUM CONSULTING. ALL RIGHTS RESERVED.</p>
+<p class="mt-3 text-sm text-gray-400 text-center leading-relaxed">By continuing this page you agree to our <a class="text-brand-orange hover:underline" href="terms.html">Terms &amp; Conditions</a>, <a class="text-brand-orange hover:underline" href="privacy.html">Privacy Policy</a> and <a class="text-brand-orange hover:underline" href="terms.html#refund-policy">Refund Policy</a>.</p>
 </div>
 </div>
 </footer>
