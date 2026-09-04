@@ -392,6 +392,14 @@
     #home + section .fact-value { color: var(--reference-blue); font-family: 'Inter', sans-serif; font-weight: 800; }
     .marquee { background: #f1f6fd !important; }
     .marquee__item { color: var(--reference-blue); }
+    .ref-partners { background: #f1f6fd; border-top: 1px solid var(--reference-line); border-bottom: 1px solid var(--reference-line); }
+    .ref-partners .ref-shell { padding-top: 34px; padding-bottom: 34px; }
+    .ref-partners .ref-heading { margin-bottom: 18px; }
+    .ref-partner-grid { display: flex; justify-content: center; gap: 16px; }
+    .ref-partner-card { min-width: 210px; display: flex; align-items: center; justify-content: center; gap: 12px; padding: 16px 24px; border: 1px solid var(--reference-line); border-radius: 5px; background: #fff; box-shadow: 0 5px 15px rgba(38, 82, 139, .05); transition: transform .25s ease, box-shadow .25s ease; }
+    .ref-partner-card:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(38, 82, 139, .12); }
+    .ref-partner-card img { width: 42px; height: 42px; object-fit: contain; }
+    .ref-partner-card strong { color: var(--reference-navy); font-size: .95rem; }
     .legacy-home-section { display: none; }
     .ref-solutions, .ref-process { background: #fff; }
     .ref-why { background: #f1f6fd; }
@@ -418,10 +426,13 @@
     @media (max-width: 767px) {
       #siteNav .nav-inner { padding: 0 16px; }
       #siteNav .nav-logo { height: 35px; }
-      #home .hero-browser-bg { height: 230px; background-size: cover; background-position: 34% center; }
+      #home .hero-browser-bg { display: none; }
       #home > .max-w-7xl { position: relative; inset: auto; height: auto; padding-top: 24px; padding-bottom: 44px; }
+      #home > .max-w-7xl > img { display: block; width: 100%; height: auto; margin-bottom: 24px; border-radius: 8px; box-shadow: 0 10px 26px rgba(38, 82, 139, .12); }
       #home .grid > div:last-child { width: auto; margin-left: 0; padding: 18px; }
       .ref-shell { padding: 38px 18px; }
+      .ref-partner-grid { gap: 10px; }
+      .ref-partner-card { min-width: 0; flex: 1; padding: 13px 12px; }
       .ref-solution-grid, .ref-process-grid { grid-template-columns: repeat(2, 1fr); }
       .ref-why-grid { grid-template-columns: 1fr; gap: 24px; }
       .ref-why-image { height: 210px; }
@@ -700,6 +711,26 @@
 </div>
 </section>
 <!-- END: Facts + Marquee Strip -->
+<!-- BEGIN: Trusted Partners -->
+<section class="ref-partners" aria-labelledby="trusted-partners-title">
+<div class="ref-shell">
+<div class="ref-heading">
+<span>TRUSTED PARTNERS</span>
+<h2 id="trusted-partners-title">Technology that supports your business</h2>
+</div>
+<div class="ref-partner-grid">
+<a class="ref-partner-card" href="https://www.zoho.com/" target="_blank" rel="noopener" aria-label="Zoho website">
+<img src="https://cdn.simpleicons.org/zoho" alt="Zoho logo">
+<strong>Zoho</strong>
+</a>
+<a class="ref-partner-card" href="https://vyaparapp.in/" target="_blank" rel="noopener" aria-label="Vyapar website">
+<img src="https://www.google.com/s2/favicons?domain=vyaparapp.in&amp;sz=128" alt="Vyapar logo">
+<strong>Vyapar</strong>
+</a>
+</div>
+</div>
+</section>
+<!-- END: Trusted Partners -->
 <!-- BEGIN: Benefits Section -->
 <section class="legacy-home-section py-20 bg-white">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
