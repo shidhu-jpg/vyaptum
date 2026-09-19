@@ -276,19 +276,19 @@
       width: 2.75rem;
       height: 2.75rem;
       border-radius: 9999px;
-      background: #3f1d63;
+      background: #063b8f;
       color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 10px 26px -8px rgba(63, 29, 99, 0.5);
+      box-shadow: 0 10px 26px -8px rgba(6, 59, 143, 0.5);
       opacity: 0;
       transform: translateY(12px);
       pointer-events: none;
       transition: opacity .3s ease, transform .3s ease, background-color .2s ease;
     }
     #toTop.is-shown { opacity: 1; transform: none; pointer-events: auto; }
-    #toTop:hover { background: #c8720a; }
+    #toTop:hover { background: #0057c8; }
 
     /* --- Marquee strip of services --- */
     .marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
@@ -395,11 +395,15 @@
     .ref-partners { background: #f1f6fd; border-top: 1px solid var(--reference-line); border-bottom: 1px solid var(--reference-line); }
     .ref-partners .ref-shell { padding-top: 34px; padding-bottom: 34px; }
     .ref-partners .ref-heading { margin-bottom: 18px; }
-    .ref-partner-grid { display: flex; justify-content: center; gap: 16px; }
-    .ref-partner-card { min-width: 210px; display: flex; align-items: center; justify-content: center; gap: 12px; padding: 16px 24px; border: 1px solid var(--reference-line); border-radius: 5px; background: #fff; box-shadow: 0 5px 15px rgba(38, 82, 139, .05); transition: transform .25s ease, box-shadow .25s ease; }
+    .ref-partner-viewport { overflow: hidden; }
+    .ref-partner-grid { display: flex; gap: 16px; width: 200%; animation: partners-swipe 18s linear infinite; }
+    .ref-partner-grid:hover { animation-play-state: paused; }
+    .ref-partner-card { flex: 0 0 calc((100% - 16px) / 2); min-width: 210px; display: flex; align-items: center; justify-content: center; gap: 12px; padding: 16px 24px; border: 1px solid var(--reference-line); border-radius: 5px; background: #fff; box-shadow: 0 5px 15px rgba(38, 82, 139, .05); transition: transform .25s ease, box-shadow .25s ease; }
     .ref-partner-card:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(38, 82, 139, .12); }
     .ref-partner-card img { width: 42px; height: 42px; object-fit: contain; }
     .ref-partner-card strong { color: var(--reference-navy); font-size: .95rem; }
+    @keyframes partners-swipe { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @media (prefers-reduced-motion: reduce) { .ref-partner-grid { animation: none; width: 100%; flex-wrap: wrap; justify-content: center; } }
     .legacy-home-section { display: none; }
     .ref-solutions, .ref-process { background: #fff; }
     .ref-why { background: #f1f6fd; }
@@ -742,6 +746,7 @@
 <span>TRUSTED PARTNERS</span>
 <h2 id="trusted-partners-title">Technology that supports your business</h2>
 </div>
+<div class="ref-partner-viewport">
 <div class="ref-partner-grid">
 <a class="ref-partner-card" href="https://www.zoho.com/" target="_blank" rel="noopener" aria-label="Zoho website">
 <img src="https://cdn.simpleicons.org/zoho" alt="Zoho logo">
@@ -751,6 +756,15 @@
 <img src="https://www.google.com/s2/favicons?domain=vyaparapp.in&amp;sz=128" alt="Vyapar logo">
 <strong>Vyapar</strong>
 </a>
+<a class="ref-partner-card" href="https://www.zoho.com/" target="_blank" rel="noopener" aria-label="Zoho website" aria-hidden="true" tabindex="-1">
+<img src="https://cdn.simpleicons.org/zoho" alt="">
+<strong>Zoho</strong>
+</a>
+<a class="ref-partner-card" href="https://vyaparapp.in/" target="_blank" rel="noopener" aria-label="Vyapar website" aria-hidden="true" tabindex="-1">
+<img src="https://www.google.com/s2/favicons?domain=vyaparapp.in&amp;sz=128" alt="">
+<strong>Vyapar</strong>
+</a>
+</div>
 </div>
 </div>
 </section>
