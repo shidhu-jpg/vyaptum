@@ -7,6 +7,26 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   const WHATSAPP_NUMBER = '916209005226';
+  const LEGAL_FRAMEWORKS = {
+    'Private Limited Company': 'Companies Act, 2013; Companies (Incorporation) Rules, 2014; and MCA incorporation forms and filing requirements.',
+    'Public Limited Company': 'Companies Act, 2013; Companies (Incorporation) Rules, 2014; and applicable corporate governance and capital requirements.',
+    'Partnership': 'Indian Partnership Act, 1932; applicable state registration rules; and the terms recorded in the partnership deed.',
+    'One Person Company': 'Companies Act, 2013; Companies (Incorporation) Rules, 2014; and the requirements applicable to nominee and member details.',
+    'Annual Filing': 'Companies Act, 2013; applicable annual-return and financial-statement rules; and MCA filing requirements.',
+    'GST Return': 'Central Goods and Services Tax Act, 2017; related GST rules; and applicable forms, notifications and due dates.',
+    'Income Tax Return': 'Income-tax Act, 1961; Income-tax Rules, 1962; and the applicable return form, assessment year and reporting requirements.',
+    'ROC Compliance': 'Companies Act, 2013; related rules; MCA forms; and event-based or recurring Registrar of Companies requirements.',
+    'Trademark Registration': 'Trade Marks Act, 1999; Trade Marks Rules, 2017; and the examination, publication and opposition procedure.',
+    'Patent Registration': 'Patents Act, 1970; Patents Rules, 2003; and the applicable filing, examination and prosecution requirements.',
+    'Copyright Registration': 'Copyright Act, 1957; Copyright Rules, 2013; and the requirements for recording authorship and ownership.',
+    'Design Registration': 'Designs Act, 2000; Designs Rules, 2001; and the requirements for representations, classification and examination.',
+    'Talk to a Lawyer': 'The law applicable to the facts, documents, agreements and jurisdiction involved in the client’s specific matter.',
+    'Legal Notice': 'The governing contract or statute, applicable limitation principles, procedural requirements and the facts supporting the notice.',
+    'Contract Drafting': 'The Indian Contract Act, 1872; applicable commercial laws; and sector-specific rules relevant to the proposed agreement.',
+    'Legal Documentation': 'The law governing the document’s purpose, parties, transaction and intended use, together with applicable execution and stamping requirements.',
+    'Share Types': 'Companies Act, 2013; applicable share and securities rules; and the company’s constitutional documents and shareholder arrangements.',
+    'Loans & CC': 'The facility terms, applicable banking and lending regulations, security documentation and any sector-specific requirements.'
+  };
   const SERVICE_DETAILS = {
     'Private Limited Company': {
       intro: 'Build a credible company structure with limited liability, clear ownership and a compliance foundation that can support future growth.',
@@ -185,6 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const serviceName = params.get('name') || 'Our Services';
   const categoryName = params.get('category') || '';
   const details = SERVICE_DETAILS[serviceName] || fallbackDetails;
+  const legalFramework = LEGAL_FRAMEWORKS[serviceName] || 'The applicable central and state laws, rules, forms and authority requirements for the selected service.';
 
   const buildWhatsAppLink = (topic) => {
     const text = `Hi, I'd like to know more about ${topic}.`;
@@ -207,6 +228,61 @@ document.addEventListener('DOMContentLoaded', () => {
   setText('svcCategoryLabel', categoryName || 'Service');
   setText('svcNameHeading', serviceName);
   setText('svcIntro', details.intro);
+  setText('svcAudience', `${categoryName || 'Business'} clients who need support with ${details.focus}.`);
+  setText('svcDeliverables', `You receive support with ${details.work}, a tailored document checklist, filing coordination and completion updates.`);
+  setText('svcConsiderations', `${details.timeline} ${details.pricing}`);
+  setText('svcCaseStudyContext', `A ${categoryName || 'business'} client needs help with ${details.focus}, but wants a clear plan before submitting anything.`);
+  setText('svcCaseStudyOutcome', `The engagement is organized around ${details.work}. The client receives a checklist covering ${details.documents}`);
+  setText('svcWhy', `${serviceName} matters because it helps you address ${details.focus} with a documented route instead of relying on last-minute decisions.`);
+  setText('svcWhat', `It covers ${details.work}, supported by a checklist for ${details.documents}`);
+  setText('svcBenefitsSummary', `${details.benefits[0]}, ${details.benefits[1].toLowerCase()}, and ${details.benefits[2].toLowerCase()}.`);
+  setText('svcTips', `Prepare ${details.documents.toLowerCase()} Keep copies of submissions and respond promptly when clarification is requested.`);
+  setText('svcGuideTitle', `Understanding ${serviceName}`);
+  setText('svcGuideIntro', `${serviceName} is a structured way for ${categoryName || 'business'} clients to address ${details.focus}.`);
+  setText('svcGuideDetail', `The engagement usually combines ${details.work}. It is designed to turn a complex requirement into clear actions, organized records and timely follow-up.`);
+  setText('svcGuideWhyTitle', `Why ${serviceName} matters`);
+  setText('svcGuideWhy', `Good preparation for ${serviceName} helps reduce avoidable corrections, missed information and uncertainty during the process. ${details.timeline}`);
+  setText('svcAboutTitle', `About ${serviceName}`);
+  setText('svcAboutIntro', `${serviceName} helps ${categoryName || 'business'} clients move from an open requirement to a documented, manageable next step.`);
+  setText('svcAboutWhat', `${serviceName} addresses ${details.focus}. The work includes ${details.work}.`);
+  setText('svcAboutWho', `${categoryName || 'Business'} owners and entrepreneurs who need support with ${details.focus}.`);
+  setText('svcAboutWhen', `Consider it when you need to organize ${details.documents.toLowerCase()} or meet a relevant deadline, filing or business objective.`);
+  setText('svcAboutGoal', `The goal is to complete the right preparation and follow-up for ${serviceName}, with clear communication throughout. ${details.timeline}`);
+  setText('svcLawIntro', `${serviceName} is handled with reference to the relevant legal framework, authority process and current documentation requirements.`);
+  setText('svcLawActs', legalFramework);
+  setText('svcLawMeaning', `This means the correct documents, declarations, approvals and filing route must be checked against the requirements that apply to ${serviceName}.`);
+
+  const guideList = document.getElementById('svcGuideList');
+  if (guideList) {
+    [
+      details.benefits[0],
+      details.benefits[1],
+      `Keep ready: ${details.documents}`,
+      `Plan for: ${details.timeline}`
+    ].forEach((point) => {
+      const li = document.createElement('li');
+      li.textContent = point;
+      guideList.appendChild(li);
+    });
+  }
+
+  const planTable = document.getElementById('svcPlanTableBody');
+  if (planTable) {
+    [
+      ['01. Discovery', `Clarify ${details.focus} and confirm the right route.`, 'Business context, goals and current records.'],
+      ['02. Preparation', `Coordinate ${details.work}.`, details.documents],
+      ['03. Submission', 'Review the final pack, submit where applicable and share confirmation.', 'Approvals, signatures and timely responses.'],
+      ['04. Follow-up', 'Track progress, communicate updates and explain the next action.', 'Any additional information requested during processing.']
+    ].forEach((row) => {
+      const tr = document.createElement('tr');
+      row.forEach((cell) => {
+        const td = document.createElement('td');
+        td.textContent = cell;
+        tr.appendChild(td);
+      });
+      planTable.appendChild(tr);
+    });
+  }
 
   const includedList = document.getElementById('svcIncludedList');
   if (includedList) {
@@ -228,6 +304,9 @@ document.addEventListener('DOMContentLoaded', () => {
   setText('svcFaqAnswer1', details.timeline);
   setText('svcFaqAnswer2', details.documents);
   setText('svcFaqAnswer3', details.pricing);
+  setText('svcFaqAnswer4', `For ${serviceName}, delays can come from incomplete documents, corrections, missing approvals or external processing times. We flag gaps early and explain the next action.`);
+  setText('svcFaqAnswer5', `Yes. We share clear progress updates and tell you when an approval, signature or additional document is needed for ${serviceName}.`);
+  setText('svcFaqAnswer6', `Yes. We can review the current status, identify missing or incorrect information and recommend the most practical next step for ${serviceName}.`);
 
   document.querySelectorAll('.svc-name-inline').forEach(el => {
     el.textContent = serviceName;
