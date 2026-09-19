@@ -79,7 +79,7 @@
        it holds no other content, the heading/form sit in normal flow
        right below it. Mobile (below lg) is untouched. */
     .hero-browser-bg {
-      background-image: url('img/hero/browserheroimage.png');
+      background-image: url('img/hero/newheroimg.jpeg');
       background-size: cover;
       background-position: center;
       aspect-ratio: 1721 / 802;
@@ -438,6 +438,29 @@
       .ref-why-image { height: 210px; }
       .ref-process-step:not(:last-child)::after { display: none; }
     }
+    footer {
+      background-color: #063b8f !important;
+    }
+    footer .text-brand-orange {
+      color: #ffffff !important;
+    }
+    footer .text-gray-300,
+    footer .text-gray-400,
+    footer .text-gray-500 {
+      color: #bfd8f5 !important;
+    }
+    footer a:hover {
+      color: #5eb5ff !important;
+    }
+    footer .border-white\/10 {
+      border-color: rgba(191, 216, 245, 0.3) !important;
+    }
+    footer .border-brand-orange {
+      border-color: #0057c8 !important;
+    }
+    footer .hover\:bg-brand-orange:hover {
+      background-color: #0057c8 !important;
+    }
   </style>
 </head>
 <body class="antialiased text-gray-800">
@@ -448,7 +471,7 @@
 <div class="flex justify-between h-20 nav-inner">
 <div class="flex items-center">
 <a class="flex-shrink-0 flex items-center" href="index.html#home">
-<img alt="Vyaptum Advisory" class="h-9 w-auto nav-logo" src="img/brand/logo.jpeg"/>
+<img alt="Vyaptum Advisory" class="h-9 w-auto nav-logo" src="img/brand/newheaderlogo.jpeg"/>
 </a>
 </div>
 <div class="hidden md:flex items-center space-x-8">
@@ -567,7 +590,7 @@
 <header class="relative overflow-hidden hero-pattern" id="home">
 <div aria-label="Vyaptum Advisory Hero" class="hidden lg:block w-full hero-browser-bg" role="img"></div>
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16 pb-24">
-<img alt="Vyaptum Advisory Hero" class="w-full rounded-2xl shadow-xl mb-12 lg:hidden" src="img/brand/mobilephoneheroimage.jpeg"/>
+<img alt="Vyaptum Advisory Hero" class="w-full rounded-2xl shadow-xl mb-12 lg:hidden" src="img/hero/newheroimg.jpeg"/>
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 <div>
 <span class="inline-flex items-center rounded-full bg-brand-orange/10 px-4 py-2 text-sm font-bold text-brand-orange">Limited-time launch offer</span>
@@ -840,40 +863,33 @@
 </section>
 <!-- END: Reference Homepage Sections -->
 <!-- BEGIN: Testimonials Section -->
-<section class="py-20 testimonial-pattern relative overflow-hidden font-sans">
-<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-10 gap-4">
-<h2 class="text-2xl md:text-3xl font-bold text-white">Testimonials That Speak for Us</h2>
-<a class="px-6 py-2 border border-white text-white rounded-lg hover:bg-white hover:text-[#0d2235] transition font-semibold text-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Vyaptum%20Complex%2C%20Braham%20Baba%20Mandir%2C%20Bettiah%20Road%2C%20Areraj%2C%20Bihar%20845411" rel="noopener" target="_blank">View All</a>
-</div>
-<div id="tstTrack">
-<!-- Slide 1 (genuine Google review) -->
-<article class="tst-slide bg-[#1a2d42] p-8 md:p-10 rounded-3xl border border-white/10 shadow-xl">
-<div class="flex flex-col sm:flex-row items-start sm:items-center mb-6 gap-5">
-<img alt="Ramandeep Singh" class="w-20 h-20 rounded-full object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3IbEpv8Fw9TI2xJZUlyN2SBGavcRPwZ7T6R4EloSswT2Q0HY-B_mURqYTJSxE9ZJ8BTkqZQu6ipfa_h3N7x7ozllfjqwdmLCu9WJQVDAKhuMgsAu5gN8ANhqsoNvgA3cZgtEnmTQf3t0INEnb5Yp4FdX_k-GLZT5eM7zdmTPah1sbi4lwFIPFvawJJxYlq4zleFBNcaSiw3hOXsDj5V5XLlbnJh9plFu-Paz-Sc3-0UowAIAgvJVdcg"/>
+<section class="bg-[#f4f8ff] py-20 font-sans">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 gap-6">
 <div>
-<h3 class="text-xl md:text-2xl font-bold text-white mb-2">Ramandeep Singh</h3>
-<div class="flex items-center gap-3">
-<div class="flex text-[#F97316] text-xl gap-1">
-<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+<p class="text-[#0057C8] text-xs font-bold uppercase tracking-[0.18em] mb-3">Client experiences</p>
+<h2 class="text-3xl md:text-4xl font-bold text-[#0B1F3A]">Testimonials That Speak for Us</h2>
+<p class="mt-3 text-[#4c5c71] text-base md:text-lg">Trusted by businesses and entrepreneurs across India.</p>
 </div>
-<span class="text-white/80 font-medium text-lg">5/5</span>
+<a class="inline-flex items-center justify-center px-6 py-2.5 border border-[#0057C8] text-[#0057C8] rounded-lg hover:bg-[#0057C8] hover:text-white transition font-semibold text-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Vyaptum%20Complex%2C%20Braham%20Baba%20Mandir%2C%20Bettiah%20Road%2C%20Areraj%2C%20Bihar%20845411" rel="noopener" target="_blank">View All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="tstTrack">
+<article class="tst-slide flex flex-col min-h-[310px] bg-white p-7 md:p-8 rounded-[18px] border border-[#dce7f6] shadow-[0_8px_24px_rgba(11,31,58,0.06)]">
+<div class="flex items-center gap-4 mb-6">
+<img alt="Ramandeep Singh" class="w-14 h-14 rounded-full object-cover border-2 border-[#bfd8f5]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3IbEpv8Fw9TI2xJZUlyN2SBGavcRPwZ7T6R4EloSswT2Q0HY-B_mURqYTJSxE9ZJ8BTkqZQu6ipfa_h3N7x7ozllfjqwdmLCu9WJQVDAKhuMgsAu5gN8ANhqsoNvgA3cZgtEnmTQf3t0INEnb5Yp4FdX_k-GLZT5eM7zdmTPah1sbi4lwFIPFvawJJxYlq4zleFBNcaSiw3hOXsDj5V5XLlbnJh9plFu-Paz-Sc3-0UowAIAgvJVdcg"/>
+<div>
+<h3 class="text-lg font-bold text-[#0B1F3A] mb-1">Ramandeep Singh</h3>
+<div class="flex items-center gap-2">
+<div class="flex text-[#0057C8] text-sm gap-0.5" aria-label="5 out of 5 stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+<span class="text-[#0B1F3A] font-semibold text-sm">5/5</span>
 </div>
 </div>
 </div>
-<p class="text-white text-lg leading-relaxed font-medium">
-Everything is good with kulwinder he is such a nice person and his way of communication is to good and he soves the quiers time to time
-</p>
+<div class="flex-1 relative">
+<svg aria-hidden="true" class="absolute -top-2 right-0 w-9 h-9 text-[#bfd8f5]" fill="currentColor" viewbox="0 0 32 32"><path d="M7.2 21.7c-2.1 0-3.8-1.8-3.8-4 0-4.7 3.1-8.1 8.7-9.8l1.2 2.5c-2.5.9-4 2.2-4.7 4 .4-.2.9-.3 1.5-.3 2 0 3.7 1.6 3.7 3.7s-1.7 3.9-3.8 3.9zm13.4 0c-2.1 0-3.8-1.8-3.8-4 0-4.7 3.1-8.1 8.7-9.8l1.2 2.5c-2.5.9-4 2.2-4.7 4 .4-.2.9-.3 1.5-.3 2 0 3.7 1.6 3.7 3.7s-1.7 3.9-3.8 3.9z"></path></svg>
+<p class="pr-8 text-[#0B1F3A] text-base leading-7">Everything is good with kulwinder he is such a nice person and his way of communication is to good and he soves the quiers time to time</p>
+</div>
 </article>
-</div>
-<div class="flex justify-center items-center gap-5 mt-10" id="tstControls">
-<button aria-label="Previous testimonial" class="w-12 h-12 rounded-full border border-white flex items-center justify-center text-white hover:bg-white hover:text-[#0d2235] transition" id="tstPrev" type="button">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-</button>
-<div class="flex items-center gap-2" id="tstDots"></div>
-<button aria-label="Next testimonial" class="w-12 h-12 rounded-full border border-white flex items-center justify-center text-white hover:bg-white hover:text-[#0d2235] transition" id="tstNext" type="button">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-</button>
 </div>
 </div>
 </section>
@@ -925,7 +941,7 @@ Everything is good with kulwinder he is such a nice person and his way of commun
 <button aria-label="Back to top" id="toTop" type="button">
 <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M18 15l-6-6-6 6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </button>
-<footer class="bg-brand-navy text-white pt-20 pb-8">
+<footer class="bg-[#123fbd] text-white pt-20 pb-8">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <!-- Virtual Office Cities -->
 <div class="border-t border-white/10 border-b border-white/10 py-8 mb-12">
