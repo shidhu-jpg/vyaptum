@@ -407,11 +407,14 @@
     .ref-partners .ref-shell { padding-top: 72px; padding-bottom: 72px; }
     .ref-partners .ref-heading { margin-bottom: 32px; }
     .ref-partner-viewport { overflow: hidden; }
-    .ref-partner-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; width: 100%; }
-    .ref-partner-card { min-width: 0; min-height: 132px; display: flex; align-items: center; justify-content: center; gap: 16px; padding: 24px 28px; border: 1px solid var(--reference-line); border-radius: 8px; background: #fff; box-shadow: 0 5px 15px rgba(36, 16, 61, .05); transition: transform .25s ease, box-shadow .25s ease; }
+    .ref-partner-grid { display: flex; gap: 22px; width: max-content; animation: partners-swipe 18s linear infinite; }
+    .ref-partner-grid:hover { animation-play-state: paused; }
+    .ref-partner-card { flex: 0 0 clamp(280px, 42vw, 520px); min-height: 132px; display: flex; align-items: center; justify-content: center; gap: 16px; padding: 24px 28px; border: 1px solid var(--reference-line); border-radius: 8px; background: #fff; box-shadow: 0 5px 15px rgba(36, 16, 61, .05); transition: transform .25s ease, box-shadow .25s ease; }
     .ref-partner-card:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(36, 16, 61, .12); }
     .ref-partner-card img { width: 56px; height: 56px; object-fit: contain; }
     .ref-partner-card strong { color: var(--reference-navy); font-size: 1.1rem; }
+    @keyframes partners-swipe { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 11px)); } }
+    @media (prefers-reduced-motion: reduce) { .ref-partner-grid { animation: none; width: 100%; flex-wrap: wrap; } }
     .legacy-home-section { display: none; }
     .ref-solutions, .ref-process { background: #fff; }
     .ref-why { background: #f5effa; }
@@ -443,8 +446,8 @@
       #home > .max-w-7xl > img { display: block; width: 100%; height: auto; margin-bottom: 24px; border-radius: 8px; box-shadow: 0 10px 26px rgba(36, 16, 61, .12); }
       #home .grid > div:last-child { width: auto; margin-left: 0; padding: 18px; }
       .ref-shell { padding: 38px 18px; }
-      .ref-partner-grid { grid-template-columns: 1fr; gap: 12px; }
-      .ref-partner-card { min-height: 96px; padding: 18px 16px; }
+      .ref-partner-grid { gap: 12px; }
+      .ref-partner-card { flex-basis: min(78vw, 360px); min-height: 96px; padding: 18px 16px; }
       .ref-partner-card img { width: 46px; height: 46px; }
       .ref-solution-grid, .ref-process-grid { grid-template-columns: repeat(2, 1fr); }
       .ref-why-grid { grid-template-columns: 1fr; gap: 24px; }
@@ -764,6 +767,14 @@
 </a>
 <a class="ref-partner-card" href="https://vyaparapp.in/" target="_blank" rel="noopener" aria-label="Vyapar website">
 <img src="https://www.google.com/s2/favicons?domain=vyaparapp.in&amp;sz=128" alt="Vyapar logo">
+<strong>Vyapar</strong>
+</a>
+<a class="ref-partner-card" href="https://www.zoho.com/" target="_blank" rel="noopener" aria-label="Zoho website" aria-hidden="true" tabindex="-1">
+<img src="https://cdn.simpleicons.org/zoho" alt="">
+<strong>Zoho</strong>
+</a>
+<a class="ref-partner-card" href="https://vyaparapp.in/" target="_blank" rel="noopener" aria-label="Vyapar website" aria-hidden="true" tabindex="-1">
+<img src="https://www.google.com/s2/favicons?domain=vyaparapp.in&amp;sz=128" alt="">
 <strong>Vyapar</strong>
 </a>
 </div>
