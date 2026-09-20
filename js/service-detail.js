@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'Public Limited Company': 'Companies Act, 2013; Companies (Incorporation) Rules, 2014; and applicable corporate governance and capital requirements.',
     'Partnership': 'Indian Partnership Act, 1932; applicable state registration rules; and the terms recorded in the partnership deed.',
     'One Person Company': 'Companies Act, 2013; Companies (Incorporation) Rules, 2014; and the requirements applicable to nominee and member details.',
+    'Digital Signature Certificate (DSC)': 'Information Technology Act, 2000; applicable electronic signature rules; and the requirements of the relevant certifying authority and filing portal.',
     'Annual Filing': 'Companies Act, 2013; applicable annual-return and financial-statement rules; and MCA filing requirements.',
     'GST Return': 'Central Goods and Services Tax Act, 2017; related GST rules; and applicable forms, notifications and due dates.',
     'Income Tax Return': 'Income-tax Act, 1961; Income-tax Rules, 1962; and the applicable return form, assessment year and reporting requirements.',
@@ -63,6 +64,15 @@ document.addEventListener('DOMContentLoaded', () => {
       documents: 'Owner and nominee identity proof, address proof, consent documents, office proof and business activity details.',
       timeline: 'Once documents are complete, incorporation generally takes about 7 to 15 working days, subject to approval.',
       pricing: 'Pricing varies with government fees, nominee documentation and any additional registrations requested.'
+    },
+    'Digital Signature Certificate (DSC)': {
+      intro: 'Get a verified digital signature for secure electronic signing on relevant government and business portals.',
+      focus: 'certificate type, applicant role, identity verification and intended filing portal',
+      work: 'certificate selection, document verification, issuance coordination and usage guidance',
+      benefits: ['Secure electronic authentication for eligible filings', 'Faster execution of online forms and declarations', 'A reusable certificate for applicable business requirements', 'Clear guidance on certificate validity and responsible use'],
+      documents: 'PAN or identity proof, address proof, email address, mobile number, photograph and applicant or entity details as required by the issuing process.',
+      timeline: 'Issuance may be completed within 1 to 3 working days after successful verification, subject to the provider and applicant response time.',
+      pricing: 'Pricing depends on certificate class, validity period, token or delivery requirements and verification charges.'
     },
     'Annual Filing': {
       intro: 'Keep your company records current with organized annual filings, document review and a clear compliance calendar.',
@@ -251,6 +261,10 @@ document.addEventListener('DOMContentLoaded', () => {
   setText('svcLawIntro', `${serviceName} is handled with reference to the relevant legal framework, authority process and current documentation requirements.`);
   setText('svcLawActs', legalFramework);
   setText('svcLawMeaning', `This means the correct documents, declarations, approvals and filing route must be checked against the requirements that apply to ${serviceName}.`);
+  setText('svcDscIntro', `A Digital Signature Certificate (DSC) is an electronic signature used to authenticate documents and filings connected with ${serviceName} when the relevant portal requires it.`);
+  setText('svcDscWhy', `For ${serviceName}, a DSC may be needed by a director, partner, authorized signatory, applicant or professional for secure online signing and submission. It is confirmed based on the filing type and portal.`);
+  setText('svcDscDocuments', `Typical verification may require identity and address proof, PAN or entity details, an active email address, mobile number and a recent photograph or video verification where required.`);
+  setText('svcDscProcess', `We identify the appropriate certificate type, collect the verification details, coordinate issuance and explain how the DSC should be used for ${serviceName}.`);
 
   const guideList = document.getElementById('svcGuideList');
   if (guideList) {
