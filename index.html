@@ -11,7 +11,7 @@
         extend: {
           colors: {
             brand: {
-              navy: '#3f1d63',
+              navy: '#8b5cf6',
               orange: '#c8720a',
               orangeDark: '#a85f08',
               light: '#faf7f2',
@@ -44,7 +44,7 @@
       background-color: #ffffff;
     }
     .text-gradient {
-      background: linear-gradient(90deg, #3f1d63 0%, #c8720a 100%);
+      background: linear-gradient(90deg, #8b5cf6 0%, #c8720a 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -55,11 +55,11 @@
       scroll-margin-top: 96px;
     }
     .testimonial-pattern {
-      background-color: #0d2235;
+      background-color: #4c1d95;
       background-image:
         radial-gradient(circle at 8% 12%, rgba(200, 114, 10, 0.4), transparent 32%),
         radial-gradient(circle at 92% 15%, rgba(139, 92, 246, 0.35), transparent 30%),
-        radial-gradient(circle at 85% 90%, rgba(63, 29, 99, 0.55), transparent 40%),
+        radial-gradient(circle at 85% 90%, rgba(139, 92, 246, 0.55), transparent 40%),
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36'%3E%3Ccircle cx='2' cy='2' r='1.5' fill='white' fill-opacity='0.14'/%3E%3C/svg%3E");
       background-repeat: no-repeat, no-repeat, no-repeat, repeat;
       background-size: auto, auto, auto, 36px 36px;
@@ -68,7 +68,7 @@
       background-color: #faf7f2;
       background-image:
         radial-gradient(circle at 6% 10%, rgba(200, 114, 10, 0.18), transparent 32%),
-        radial-gradient(circle at 94% 20%, rgba(63, 29, 99, 0.16), transparent 32%),
+        radial-gradient(circle at 94% 20%, rgba(139, 92, 246, 0.16), transparent 32%),
         radial-gradient(circle at 50% 105%, rgba(139, 92, 246, 0.14), transparent 45%),
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36'%3E%3Ccircle cx='2' cy='2' r='1.5' fill='%233f1d63' fill-opacity='0.10'/%3E%3C/svg%3E");
       background-repeat: no-repeat, no-repeat, no-repeat, repeat;
@@ -94,7 +94,7 @@
     /* --- Sticky nav: shrink + deepen shadow on scroll --- */
     #siteNav .nav-inner { height: 5rem; transition: height .3s ease; }
     #siteNav .nav-logo { transition: transform .3s ease; }
-    #siteNav.nav-shrink { box-shadow: 0 6px 24px -6px rgba(63, 29, 99, 0.18); }
+    #siteNav.nav-shrink { box-shadow: 0 6px 24px -6px rgba(139, 92, 246, 0.18); }
     #siteNav.nav-shrink .nav-inner { height: 4rem; }
     #siteNav.nav-shrink .nav-logo { transform: scale(0.85); }
 
@@ -142,11 +142,11 @@
       transform-origin: left;
       transition: transform .3s ease;
     }
-    .card-lift:hover { transform: translateY(-6px); box-shadow: 0 24px 44px -14px rgba(63, 29, 99, 0.24); }
+    .card-lift:hover { transform: translateY(-6px); box-shadow: 0 24px 44px -14px rgba(139, 92, 246, 0.24); }
     .card-lift:hover::before { transform: scaleX(1); }
     .card-lift .icon-badge { transition: background-color .3s ease; }
     .card-lift .icon-badge svg { transition: color .3s ease; }
-    .card-lift:hover .icon-badge { background-color: #3f1d63; }
+    .card-lift:hover .icon-badge { background-color: #8b5cf6; }
     .card-lift:hover .icon-badge svg { color: #ffffff; }
 
     /* --- Floating WhatsApp button with pulsing ring --- */
@@ -192,7 +192,7 @@
     }
 
     /* --- Floating AI assistant (left) --- */
-    .ai-fab { box-shadow: 0 12px 30px -8px rgba(63, 29, 99, 0.55); }
+    .ai-fab { box-shadow: 0 12px 30px -8px rgba(139, 92, 246, 0.55); }
     .ai-fab::after {
       content: "";
       position: absolute;
@@ -234,7 +234,7 @@
       word-wrap: break-word;
     }
     .ai-bubble-bot { background: #f3f0ea; color: #1f2937; border-bottom-left-radius: .25rem; }
-    .ai-bubble-user { background: #3f1d63; color: #fff; border-bottom-right-radius: .25rem; }
+    .ai-bubble-user { background: #8b5cf6; color: #fff; border-bottom-right-radius: .25rem; }
     .ai-typing { display: inline-flex; gap: 4px; align-items: center; }
     .ai-typing span {
       width: 6px; height: 6px; border-radius: 50%;
@@ -261,7 +261,7 @@
       height: 3px;
       width: 0;
       z-index: 60;
-      background: linear-gradient(90deg, #3f1d63, #c8720a);
+      background: linear-gradient(90deg, #8b5cf6, #c8720a);
       transition: width .1s linear;
       pointer-events: none;
     }
@@ -275,19 +275,19 @@
       width: 2.75rem;
       height: 2.75rem;
       border-radius: 9999px;
-      background: #063b8f;
+      background: #8b5cf6;
       color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 10px 26px -8px rgba(6, 59, 143, 0.5);
+      box-shadow: 0 10px 26px -8px rgba(139, 92, 246, 0.5);
       opacity: 0;
       transform: translateY(12px);
       pointer-events: none;
       transition: opacity .3s ease, transform .3s ease, background-color .2s ease;
     }
     #toTop.is-shown { opacity: 1; transform: none; pointer-events: auto; }
-    #toTop:hover { background: #0057c8; }
+    #toTop:hover { background: #5a278c; }
 
     /* --- Marquee strip of services --- */
     .marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
@@ -300,9 +300,9 @@
       white-space: nowrap;
       padding: .5rem 1.1rem;
       border-radius: 9999px;
-      border: 1px solid rgba(63, 29, 99, 0.15);
+      border: 1px solid rgba(139, 92, 246, 0.15);
       background: #fff;
-      color: #3f1d63;
+      color: #8b5cf6;
       font-weight: 600;
       font-size: .875rem;
     }
@@ -366,39 +366,39 @@
   </style>
   <style>
     /* Home page reference styling */
-    :root { --reference-blue: #0d55bd; --reference-navy: #10233f; --reference-pale: #f4f8ff; --reference-line: #dce7f6; --reference-text: #4c5c71; }
+    :root { --reference-purple: #8b5cf6; --reference-navy: #5b21b6; --reference-pale: #fdfaff; --reference-line: #e9d5ff; --reference-text: #4c5c71; }
     body { background: var(--reference-pale); color: var(--reference-navy); }
     #siteNav { background: rgba(255, 255, 255, .96); box-shadow: 0 1px 0 var(--reference-line); }
     #siteNav .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
     #siteNav .nav-logo { height: 42px; }
     #siteNav .nav-link { color: var(--reference-navy); font-size: .78rem; }
-    #siteNav .nav-link::after { background: var(--reference-blue); }
-    #siteNav .btn-glow { background: var(--reference-blue); border-radius: 5px; padding: 10px 18px; font-size: .75rem; }
-    #home { background: linear-gradient(145deg, #f8fbff 0%, #eef5ff 63%, #dceaff 100%); }
+    #siteNav .nav-link::after { background: var(--reference-purple); }
+    #siteNav .btn-glow { background: var(--reference-purple); border-radius: 5px; padding: 10px 18px; font-size: .75rem; }
+    #home { background: linear-gradient(145deg, #fdfaff 0%, #f5f0ff 63%, #e9d5ff 100%); }
     #home .hero-browser-bg { display: block; width: 100%; height: max(675px, 53.5vw); background-image: url('img/brand/newhero.jpeg'); background-size: 100% 100%; background-position: center; background-repeat: no-repeat; animation: none !important; }
     #home > .max-w-7xl { position: relative; max-width: 1200px; height: auto; padding-top: 42px; padding-bottom: 64px; pointer-events: auto; }
     #home > .max-w-7xl > img, #home .grid > div:first-child { display: none; }
     #home .grid { display: block; }
-    #home .grid > div:last-child { width: min(100%, 720px); margin: 0 auto; background: #fff; border: 1px solid var(--reference-line); border-radius: 8px; padding: clamp(14px, 1.7vw, 22px); box-shadow: 0 18px 45px rgba(38, 82, 139, .16); pointer-events: auto; }
+    #home .grid > div:last-child { width: min(100%, 720px); margin: 0 auto; background: #fff; border: 1px solid var(--reference-line); border-radius: 8px; padding: clamp(14px, 1.7vw, 22px); box-shadow: 0 18px 45px rgba(139, 92, 246, .16); pointer-events: auto; }
     #home .grid > div:last-child h3 { color: var(--reference-navy); font-family: 'Inter', sans-serif; font-size: 1.2rem; }
-    #home .grid > div:last-child h3 span { color: var(--reference-blue); }
+    #home .grid > div:last-child h3 span { color: var(--reference-purple); }
     #home .grid > div:last-child input, #home .grid > div:last-child select { background: #fff; border-color: var(--reference-line); color: var(--reference-navy); border-radius: 4px; }
     #home .grid > div:last-child input::placeholder { color: #8694a7; }
-    #home .grid > div:last-child button { background: var(--reference-blue); border-radius: 4px; font-size: .9rem; padding: 13px 16px; }
+    #home .grid > div:last-child button { background: var(--reference-purple); border-radius: 4px; font-size: .9rem; padding: 13px 16px; }
     #home .grid > div:last-child > div:last-child { border: 1px solid var(--reference-line); padding: 12px; }
     #home .grid > div:last-child > div:last-child p { color: var(--reference-navy); }
     #home + section { background: #fff; }
-    #home + section .fact-value { color: var(--reference-blue); font-family: 'Inter', sans-serif; font-weight: 800; }
-    .marquee { background: #f1f6fd !important; }
-    .marquee__item { color: var(--reference-blue); }
-    .ref-partners { background: #f1f6fd; border-top: 1px solid var(--reference-line); border-bottom: 1px solid var(--reference-line); }
+    #home + section .fact-value { color: var(--reference-purple); font-family: 'Inter', sans-serif; font-weight: 800; }
+    .marquee { background: #faf5ff !important; }
+    .marquee__item { color: var(--reference-purple); }
+    .ref-partners { background: #faf5ff; border-top: 1px solid var(--reference-line); border-bottom: 1px solid var(--reference-line); }
     .ref-partners .ref-shell { padding-top: 34px; padding-bottom: 34px; }
     .ref-partners .ref-heading { margin-bottom: 18px; }
     .ref-partner-viewport { overflow: hidden; }
     .ref-partner-grid { display: flex; gap: 16px; width: 200%; animation: partners-swipe 18s linear infinite; }
     .ref-partner-grid:hover { animation-play-state: paused; }
-    .ref-partner-card { flex: 0 0 calc((100% - 16px) / 2); min-width: 210px; min-height: 150px; display: flex; align-items: center; justify-content: center; gap: 16px; padding: 20px 24px; border: 1px solid var(--reference-line); border-radius: 5px; background: #fff; box-shadow: 0 5px 15px rgba(38, 82, 139, .05); transition: transform .25s ease, box-shadow .25s ease; }
-    .ref-partner-card:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(38, 82, 139, .12); }
+    .ref-partner-card { flex: 0 0 calc((100% - 16px) / 2); min-width: 210px; min-height: 150px; display: flex; align-items: center; justify-content: center; gap: 16px; padding: 20px 24px; border: 1px solid var(--reference-line); border-radius: 5px; background: #fff; box-shadow: 0 5px 15px rgba(139, 92, 246, .05); transition: transform .25s ease, box-shadow .25s ease; }
+    .ref-partner-card:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(139, 92, 246, .12); }
     .ref-partner-card img { width: 76px; height: 76px; object-fit: contain; }
     .ref-partner-card strong { color: var(--reference-navy); font-size: 1.15rem; }
     .testimonial-viewport { overflow: hidden; }
@@ -411,15 +411,15 @@
     @media (prefers-reduced-motion: reduce) { .ref-partner-grid { animation: none; width: 100%; flex-wrap: wrap; justify-content: center; } }
     .legacy-home-section { display: none; }
     .ref-solutions, .ref-process { background: #fff; }
-    .ref-why { background: #f1f6fd; }
+    .ref-why { background: #faf5ff; }
     .ref-shell { max-width: 1120px; margin: 0 auto; padding: 52px 24px; }
     .ref-heading { text-align: center; margin: 0 auto 28px; }
-    .ref-heading > span, .ref-why-copy > span { color: var(--reference-blue); font-size: .7rem; font-weight: 800; letter-spacing: 1.2px; }
+    .ref-heading > span, .ref-why-copy > span { color: var(--reference-purple); font-size: .7rem; font-weight: 800; letter-spacing: 1.2px; }
     .ref-heading h2, .ref-why-copy h2 { margin: 7px 0 5px; color: var(--reference-navy); font-family: 'Inter', sans-serif; font-size: 1.4rem; font-weight: 800; }
     .ref-heading p { color: var(--reference-text); font-size: .75rem; }
     .ref-solution-grid, .ref-process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-    .ref-solution-card { min-height: 168px; padding: 18px 14px; border: 1px solid var(--reference-line); border-radius: 5px; background: #fff; text-align: center; box-shadow: 0 5px 15px rgba(38, 82, 139, .04); transition: transform .25s ease, box-shadow .25s ease; }
-    .ref-solution-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(38, 82, 139, .12); }
+    .ref-solution-card { min-height: 168px; padding: 18px 14px; border: 1px solid var(--reference-line); border-radius: 5px; background: #fff; text-align: center; box-shadow: 0 5px 15px rgba(139, 92, 246, .04); transition: transform .25s ease, box-shadow .25s ease; }
+    .ref-solution-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(139, 92, 246, .12); }
     .ref-solution-card img, .ref-process-step img { width: 46px; height: 46px; margin: 0 auto 10px; object-fit: contain; }
     .ref-solution-card strong, .ref-process-step strong { display: block; color: var(--reference-navy); font-size: .75rem; }
     .ref-solution-card p, .ref-process-step p { margin-top: 5px; color: var(--reference-text); font-size: .63rem; line-height: 1.5; }
@@ -428,10 +428,10 @@
     .ref-why-copy h2 { font-size: 2.15rem; line-height: 1.12; max-width: 420px; }
     .ref-why-copy ul { display: grid; gap: 7px; margin: 18px 0; }
     .ref-why-copy li { color: var(--reference-text); font-size: .95rem; line-height: 1.5; }
-    .ref-why-copy li::before { content: '✓'; margin-right: 8px; color: var(--reference-blue); font-weight: 800; }
-    .ref-button { display: inline-flex; padding: 8px 14px; border-radius: 3px; background: var(--reference-blue); color: #fff; font-size: .66rem; font-weight: 700; }
+    .ref-why-copy li::before { content: '✓'; margin-right: 8px; color: var(--reference-purple); font-weight: 800; }
+    .ref-button { display: inline-flex; padding: 8px 14px; border-radius: 3px; background: var(--reference-purple); color: #fff; font-size: .66rem; font-weight: 700; }
     .ref-process-step { position: relative; text-align: center; }
-    .ref-process-step:not(:last-child)::after { content: ''; position: absolute; top: 27px; left: calc(50% + 35px); width: calc(100% - 70px); border-top: 1px dashed #b9cceb; }
+    .ref-process-step:not(:last-child)::after { content: ''; position: absolute; top: 27px; left: calc(50% + 35px); width: calc(100% - 70px); border-top: 1px dashed #c4b5fd; }
     .ref-process .ref-heading h2 { font-size: 2rem; }
     .ref-process-step img { width: 64px; height: 64px; margin-bottom: 14px; }
     .ref-process-step strong { font-size: 1rem; }
@@ -441,7 +441,7 @@
       #siteNav .nav-logo { height: 35px; }
       #home .hero-browser-bg { display: none; }
       #home > .max-w-7xl { position: relative; inset: auto; height: auto; padding-top: 24px; padding-bottom: 44px; }
-      #home > .max-w-7xl > img { display: block; width: 100%; height: auto; margin-bottom: 24px; border-radius: 8px; box-shadow: 0 10px 26px rgba(38, 82, 139, .12); }
+      #home > .max-w-7xl > img { display: block; width: 100%; height: auto; margin-bottom: 24px; border-radius: 8px; box-shadow: 0 10px 26px rgba(139, 92, 246, .12); }
       #home .grid > div:last-child { width: auto; margin-left: 0; padding: 18px; }
       .ref-shell { padding: 38px 18px; }
       .ref-partner-grid { gap: 10px; }
@@ -452,7 +452,7 @@
       .ref-process-step:not(:last-child)::after { display: none; }
     }
     footer {
-      background-color: #063b8f !important;
+      background-color: #4c1d95 !important;
     }
     footer .text-brand-orange {
       color: #ffffff !important;
@@ -460,19 +460,19 @@
     footer .text-gray-300,
     footer .text-gray-400,
     footer .text-gray-500 {
-      color: #bfd8f5 !important;
+      color: #e9d5ff !important;
     }
     footer a:hover {
-      color: #5eb5ff !important;
+      color: #a855f7 !important;
     }
     footer .border-white\/10 {
-      border-color: rgba(191, 216, 245, 0.3) !important;
+      border-color: rgba(221, 214, 254, 0.3) !important;
     }
     footer .border-brand-orange {
-      border-color: #0057c8 !important;
+      border-color: #8b5cf6 !important;
     }
     footer .hover\:bg-brand-orange:hover {
-      background-color: #0057c8 !important;
+      background-color: #8b5cf6 !important;
     }
   </style>
 </head>
@@ -488,16 +488,16 @@
 </a>
 </div>
 <div class="hidden md:flex items-center space-x-8">
-<a class="nav-link text-gray-600 hover:text-brand-navy font-medium" href="services.html">Services</a>
-<a class="nav-link text-gray-600 hover:text-brand-navy font-medium" href="about.html">About</a>
-<a class="nav-link text-gray-600 hover:text-brand-navy font-medium" href="career.html">Career</a>
-<a class="nav-link text-gray-600 hover:text-brand-navy font-medium" href="service.html?name=ROC%20Compliance&amp;category=Compliance">Compliance</a>
-<a class="nav-link text-gray-600 hover:text-brand-navy font-medium" href="service.html?name=GST%20Return&amp;category=Compliance">Tax</a>
-<a class="nav-link text-gray-600 hover:text-brand-navy font-medium" href="#contact">Contact</a>
+<a class="nav-link text-gray-600 hover:text-brand-purple font-medium" href="services.html">Services</a>
+<a class="nav-link text-gray-600 hover:text-brand-purple font-medium" href="about.html">About</a>
+<a class="nav-link text-gray-600 hover:text-brand-purple font-medium" href="career.html">Career</a>
+<a class="nav-link text-gray-600 hover:text-brand-purple font-medium" href="service.html?name=ROC%20Compliance&amp;category=Compliance">Compliance</a>
+<a class="nav-link text-gray-600 hover:text-brand-purple font-medium" href="service.html?name=GST%20Return&amp;category=Compliance">Tax</a>
+<a class="nav-link text-gray-600 hover:text-brand-purple font-medium" href="#contact">Contact</a>
 </div>
 <div class="flex items-center space-x-4">
 <a class="btn-glow hidden md:inline-block bg-brand-orange text-white px-6 py-2 rounded-md font-semibold hover:bg-brand-orangeDark transition duration-300" href="#contact">Start Now</a>
-<button aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu" class="md:hidden flex items-center justify-center w-10 h-10 text-brand-navy" id="mobileMenuBtn" type="button">
+<button aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu" class="md:hidden flex items-center justify-center w-10 h-10 text-brand-purple" id="mobileMenuBtn" type="button">
 <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </button>
 </div>
@@ -509,14 +509,14 @@
 <div class="fixed inset-0 bg-black/40 z-[60] hidden" id="mobileMenuOverlay"></div>
 <div aria-hidden="true" class="fixed inset-y-0 right-0 w-full max-w-sm bg-white z-[70] translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto" id="mobileMenu">
 <div class="flex justify-end items-center px-4 h-16 border-b border-gray-100">
-<button aria-label="Close menu" class="flex items-center justify-center w-10 h-10 text-brand-navy" id="mobileMenuClose" type="button">
+<button aria-label="Close menu" class="flex items-center justify-center w-10 h-10 text-brand-purple" id="mobileMenuClose" type="button">
 <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </button>
 </div>
 <div class="px-2">
 <!-- Registrations -->
 <div class="border-b border-gray-100">
-<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-purple" type="button">
             Registrations
             <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </button>
@@ -530,7 +530,7 @@
 </div>
 <!-- Compliance -->
 <div class="border-b border-gray-100">
-<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-purple" type="button">
             Compliance
             <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </button>
@@ -543,7 +543,7 @@
 </div>
 <!-- IPR -->
 <div class="border-b border-gray-100">
-<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-purple" type="button">
             IPR
             <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </button>
@@ -556,7 +556,7 @@
 </div>
 <!-- Lawyer Services -->
 <div class="border-b border-gray-100">
-<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-purple" type="button">
             Lawyer Services
             <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </button>
@@ -570,7 +570,7 @@
 </div>
 <!-- Loans & CC -->
 <div class="border-b border-gray-100">
-<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-purple" type="button">
             Loans &amp; CC
             <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </button>
@@ -580,7 +580,7 @@
 </div>
 <!-- Calculators -->
 <div class="border-b border-gray-100">
-<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-navy" type="button">
+<button class="mobile-accordion-trigger w-full flex justify-between items-center py-5 px-3 text-left font-bold text-brand-purple" type="button">
             Calculators
             <svg class="h-4 w-4 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </button>
@@ -594,9 +594,9 @@
 </div>
 </div>
 <!-- Taxation -->
-<a class="block py-5 px-3 font-bold text-brand-navy border-b border-gray-100" href="service.html?name=GST%20Return&amp;category=Compliance">Taxation</a>
+<a class="block py-5 px-3 font-bold text-brand-purple border-b border-gray-100" href="service.html?name=GST%20Return&amp;category=Compliance">Taxation</a>
 <!-- Consultation -->
-<a class="block py-5 px-3 font-bold text-brand-navy border-b border-gray-100" href="https://wa.me/916209005226?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20consultation." rel="noopener" target="_blank">Consultation</a>
+<a class="block py-5 px-3 font-bold text-brand-purple border-b border-gray-100" href="https://wa.me/916209005226?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20consultation." rel="noopener" target="_blank">Consultation</a>
 <!-- END: Mobile Menu Drawer -->
 </div>
 </div>
@@ -608,8 +608,8 @@
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 <div>
 <span class="inline-flex items-center rounded-full bg-brand-orange/10 px-4 py-2 text-sm font-bold text-brand-orange">Limited-time launch offer</span>
-<h1 class="hero-anim d1 text-4xl sm:text-5xl font-extrabold text-brand-navy leading-tight">Private Limited Company Registration</h1>
-<p class="hero-anim d2 mt-4 text-xl text-gray-700 font-medium">Get your Private Limited Company Registration in just <span class="text-brand-navy font-bold">7 days</span> at <span class="pulse-once inline-block text-brand-orange font-bold">Rs.1,999/-</span> only.</p>
+<h1 class="hero-anim d1 text-4xl sm:text-5xl font-extrabold text-brand-purple leading-tight">Private Limited Company Registration</h1>
+<p class="hero-anim d2 mt-4 text-xl text-gray-700 font-medium">Get your Private Limited Company Registration in just <span class="text-brand-purple font-bold">7 days</span> at <span class="pulse-once inline-block text-brand-orange font-bold">Rs.1,999/-</span> only.</p>
 <ul class="hero-anim d3 mt-6 space-y-3">
 <li class="flex items-center text-gray-700"><svg class="h-6 w-6 text-brand-orange mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>2 DIN and DSC for two Directors</li>
 <li class="flex items-center text-gray-700"><svg class="h-6 w-6 text-brand-orange mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>Drafting of MoA &amp; AoA</li>
@@ -621,7 +621,7 @@
 </ul>
 </div>
 <!-- Registration Form -->
-<div class="hero-anim d4 bg-brand-navy p-8 rounded-2xl shadow-2xl relative" id="contact">
+<div class="hero-anim d4 bg-brand-purple p-8 rounded-2xl shadow-2xl relative" id="contact">
 <div class="text-center mb-6">
 <h3 class="text-xl font-bold text-white leading-tight">
               Submit your Details to get an Instant <span class="text-brand-orange">All-inclusive</span> Quote to your email and a <span class="text-brand-orange">FREE</span> Expert consultation
@@ -710,19 +710,19 @@
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 <div class="reveal grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
 <div>
-<p class="fact-value text-3xl md:text-4xl text-brand-navy"><span data-countup="1999" data-prefix="₹" data-group="1">₹1,999</span></p>
+<p class="fact-value text-3xl md:text-4xl text-brand-purple"><span data-countup="1999" data-prefix="₹" data-group="1">₹1,999</span></p>
 <p class="mt-1 text-sm text-gray-500 font-medium">Starting price</p>
 </div>
 <div>
-<p class="fact-value text-3xl md:text-4xl text-brand-navy"><span data-countup="7" data-suffix=" days">7 days</span></p>
+<p class="fact-value text-3xl md:text-4xl text-brand-purple"><span data-countup="7" data-suffix=" days">7 days</span></p>
 <p class="mt-1 text-sm text-gray-500 font-medium">Average turnaround</p>
 </div>
 <div>
-<p class="fact-value text-3xl md:text-4xl text-brand-navy"><span data-countup="4.6" data-decimals="1">4.6</span><span class="text-brand-orange">★</span></p>
+<p class="fact-value text-3xl md:text-4xl text-brand-purple"><span data-countup="4.6" data-decimals="1">4.6</span><span class="text-brand-orange">★</span></p>
 <p class="mt-1 text-sm text-gray-500 font-medium">Google rating</p>
 </div>
 <div>
-<p class="fact-value text-3xl md:text-4xl text-brand-navy"><span data-countup="100" data-suffix="%">100%</span></p>
+<p class="fact-value text-3xl md:text-4xl text-brand-purple"><span data-countup="100" data-suffix="%">100%</span></p>
 <p class="mt-1 text-sm text-gray-500 font-medium">Online process</p>
 </div>
 </div>
@@ -783,7 +783,7 @@
 <section class="legacy-home-section py-20 bg-white">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="reveal text-center mb-16">
-<h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy">
+<h2 class="text-3xl md:text-4xl font-extrabold text-brand-purple">
 <span class="head-underline text-brand-orange">Benefits</span> of Private Limited Company Registration
         </h2>
 </div>
@@ -792,37 +792,37 @@
 <div class="card-lift reveal bg-gray-50 rounded-2xl p-8 text-center shadow-sm">
 <div class="h-32 flex items-center justify-center mb-6">
 <div class="icon-badge h-20 w-20 rounded-full bg-brand-light flex items-center justify-center">
-<svg class="h-10 w-10 text-brand-navy" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" stroke-linejoin="round"></path><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="h-10 w-10 text-brand-purple" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" stroke-linejoin="round"></path><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </div>
 </div>
-<h3 class="text-lg font-bold text-brand-navy">Limited Liability Protection to Directors personal assets</h3>
+<h3 class="text-lg font-bold text-brand-purple">Limited Liability Protection to Directors personal assets</h3>
 </div>
 <!-- Benefit 2 -->
 <div class="card-lift reveal bg-gray-50 rounded-2xl p-8 text-center shadow-sm">
 <div class="h-32 flex items-center justify-center mb-6">
 <div class="icon-badge h-20 w-20 rounded-full bg-brand-light flex items-center justify-center">
-<svg class="h-10 w-10 text-brand-navy" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><circle cx="12" cy="8" r="5"></circle><path d="M9 12.5L7 21l5-3 5 3-2-8.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="h-10 w-10 text-brand-purple" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><circle cx="12" cy="8" r="5"></circle><path d="M9 12.5L7 21l5-3 5 3-2-8.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </div>
 </div>
-<h3 class="text-lg font-bold text-brand-navy">Better image and credibility in Market</h3>
+<h3 class="text-lg font-bold text-brand-purple">Better image and credibility in Market</h3>
 </div>
 <!-- Benefit 3 -->
 <div class="card-lift reveal bg-gray-50 rounded-2xl p-8 text-center shadow-sm">
 <div class="h-32 flex items-center justify-center mb-6">
 <div class="icon-badge h-20 w-20 rounded-full bg-brand-light flex items-center justify-center">
-<svg class="h-10 w-10 text-brand-navy" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15 7h6v6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="h-10 w-10 text-brand-purple" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15 7h6v6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </div>
 </div>
-<h3 class="text-lg font-bold text-brand-navy">Easy to raise fund, capital and loans</h3>
+<h3 class="text-lg font-bold text-brand-purple">Easy to raise fund, capital and loans</h3>
 </div>
 <!-- Benefit 4 -->
 <div class="card-lift reveal bg-gray-50 rounded-2xl p-8 text-center shadow-sm">
 <div class="h-32 flex items-center justify-center mb-6">
 <div class="icon-badge h-20 w-20 rounded-full bg-brand-light flex items-center justify-center">
-<svg class="h-10 w-10 text-brand-navy" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M17 20v-1a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v1" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="9" cy="7" r="3"></circle><path d="M23 20v-1a4 4 0 0 0-3-3.87" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16 3.13a4 4 0 0 1 0 7.75" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="h-10 w-10 text-brand-purple" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M17 20v-1a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v1" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="9" cy="7" r="3"></circle><path d="M23 20v-1a4 4 0 0 0-3-3.87" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16 3.13a4 4 0 0 1 0 7.75" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </div>
 </div>
-<h3 class="text-lg font-bold text-brand-navy">Favorite Business structure for Investors</h3>
+<h3 class="text-lg font-bold text-brand-purple">Favorite Business structure for Investors</h3>
 </div>
 </div>
 </div>
@@ -831,27 +831,27 @@
 <!-- BEGIN: Checklist Section -->
 <section class="legacy-home-section py-20 bg-brand-light">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy mb-4">
+<h2 class="text-3xl md:text-4xl font-extrabold text-brand-purple mb-4">
         What to keep in mind while Registering a <br/> <span class="text-brand-orange">Private Limited Company Registration?</span>
 </h2>
 <p class="text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
         As defined by the Companies Act 2013, we must guarantee that the checklist requirements are met.
-      </p><div class="mb-12 flex justify-center"><div class="h-40 w-40 rounded-full bg-white shadow-sm flex items-center justify-center"><svg class="h-20 w-20 text-brand-navy" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><rect height="17" rx="2" width="14" x="5" y="4"></rect><path d="M9 3h6a1 1 0 0 1 1 1v1H8V4a1 1 0 0 1 1-1z"></path><path d="M8.5 11.5l1.5 1.5 3-3" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8.5 16.5l1.5 1.5 3-3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
+      </p><div class="mb-12 flex justify-center"><div class="h-40 w-40 rounded-full bg-white shadow-sm flex items-center justify-center"><svg class="h-20 w-20 text-brand-purple" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><rect height="17" rx="2" width="14" x="5" y="4"></rect><path d="M9 3h6a1 1 0 0 1 1 1v1H8V4a1 1 0 0 1 1-1z"></path><path d="M8.5 11.5l1.5 1.5 3-3" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8.5 16.5l1.5 1.5 3-3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto text-left">
 <div class="card-lift reveal bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-<h3 class="text-2xl font-bold text-brand-navy mb-3">Two Directors</h3>
+<h3 class="text-2xl font-bold text-brand-purple mb-3">Two Directors</h3>
 <p class="text-gray-600">A private limited company must have at least two directors, with a maximum of fifteen. A minimum of one of the company's directors must be a resident of India.</p>
 </div>
 <div class="card-lift reveal bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-<h3 class="text-2xl font-bold text-brand-navy mb-3">Unique Name</h3>
+<h3 class="text-2xl font-bold text-brand-purple mb-3">Unique Name</h3>
 <p class="text-gray-600">The name of your business must be unique. The suggested name should not match with any existing companies or trademarks in India.</p>
 </div>
 <div class="card-lift reveal bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-<h3 class="text-2xl font-bold text-brand-navy mb-3">Minimum Capital Contribution</h3>
+<h3 class="text-2xl font-bold text-brand-purple mb-3">Minimum Capital Contribution</h3>
 <p class="text-gray-600">There is no minimum capital amount for a company. A company should have an authorized capital of at least ₹1 lakh.</p>
 </div>
 <div class="card-lift reveal bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-<h3 class="text-2xl font-bold text-brand-navy mb-3">Registered Office</h3>
+<h3 class="text-2xl font-bold text-brand-purple mb-3">Registered Office</h3>
 <p class="text-gray-600">The registered office of a company does not have to be commercial space. Even a rented home can be the registered office, so long as an NOC is obtained from the landlord.</p>
 </div>
 </div>
@@ -887,29 +887,29 @@
 </section>
 <!-- END: Reference Homepage Sections -->
 <!-- BEGIN: Testimonials Section -->
-<section class="bg-[#f4f8ff] py-20 font-sans">
+<section class="bg-[#fdfaff] py-20 font-sans">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 gap-6">
 <div>
-<p class="text-[#0057C8] text-xs font-bold uppercase tracking-[0.18em] mb-3">Client experiences</p>
-<h2 class="text-3xl md:text-4xl font-bold text-[#0B1F3A]">Testimonials That Speak for Us</h2>
-<p class="mt-3 text-[#4c5c71] text-base md:text-lg">Trusted by businesses and entrepreneurs across India.</p>
+<p class="text-[#8b5cf6] text-xs font-bold uppercase tracking-[0.18em] mb-3">Client experiences</p>
+<h2 class="text-3xl md:text-4xl font-bold text-[#5b21b6]">Testimonials That Speak for Us</h2>
+<p class="mt-3 text-[#8b5cf6] text-base md:text-lg">Trusted by businesses and entrepreneurs across India.</p>
 </div>
-<a class="inline-flex items-center justify-center px-6 py-2.5 border border-[#0057C8] text-[#0057C8] rounded-lg hover:bg-[#0057C8] hover:text-white transition font-semibold text-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Vyaptum%20Complex%2C%20Braham%20Baba%20Mandir%2C%20Bettiah%20Road%2C%20Areraj%2C%20Bihar%20845411" rel="noopener" target="_blank">View All</a>
+<a class="inline-flex items-center justify-center px-6 py-2.5 border border-[#8b5cf6] text-[#8b5cf6] rounded-lg hover:bg-[#8b5cf6] hover:text-white transition font-semibold text-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Vyaptum%20Complex%2C%20Braham%20Baba%20Mandir%2C%20Bettiah%20Road%2C%20Areraj%2C%20Bihar%20845411" rel="noopener" target="_blank">View All</a>
 </div>
 <div class="testimonial-viewport">
 <div class="testimonial-track" id="tstTrack">
-<article class="tst-slide flex flex-col min-h-[310px] bg-white p-7 md:p-8 rounded-[18px] border border-[#dce7f6] shadow-[0_8px_24px_rgba(11,31,58,0.06)]">
-<div class="flex items-center gap-4 mb-6"><img src="img/whychooseus/shidhugupta.jpeg" alt="Shidhu" class="w-14 h-14 rounded-full object-cover border-2 border-[#bfd8f5]"><div><h3 class="text-lg font-bold text-[#0B1F3A] mb-1">Shidhu</h3><div class="flex items-center gap-2"><div class="flex text-[#0057C8] text-sm gap-0.5" aria-label="5 out of 5 stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="text-[#0B1F3A] font-semibold text-sm">5/5</span></div></div></div>
-<div class="flex-1 relative"><svg aria-hidden="true" class="absolute -top-2 right-0 w-9 h-9 text-[#bfd8f5]" fill="currentColor" viewbox="0 0 32 32"><path d="M7.2 21.7c-2.1 0-3.8-1.8-3.8-4 0-4.7 3.1-8.1 8.7-9.8l1.2 2.5c-2.5.9-4 2.2-4.7 4 .4-.2.9-.3 1.5-.3 2 0 3.7 1.6 3.7 3.7s-1.7 3.9-3.8 3.9zm13.4 0c-2.1 0-3.8-1.8-3.8-4 0-4.7 3.1-8.1 8.7-9.8l1.2 2.5c-2.5.9-4 2.2-4.7 4 .4-.2.9-.3 1.5-.3 2 0 3.7 1.6 3.7 3.7s-1.7 3.9-3.8 3.9z"></path></svg><p class="pr-8 text-[#0B1F3A] text-base leading-7">The team made the entire process simple, clear, and easy to complete.</p></div>
+<article class="tst-slide flex flex-col min-h-[310px] bg-white p-7 md:p-8 rounded-[18px] border border-[#e9d5ff] shadow-[0_8px_24px_rgba(139,92,246,0.06)]">
+<div class="flex items-center gap-4 mb-6"><img src="img/whychooseus/shidhugupta.jpeg" alt="Shidhu" class="w-14 h-14 rounded-full object-cover border-2 border-[#e9d5ff]"><div><h3 class="text-lg font-bold text-[#5b21b6] mb-1">Shidhu</h3><div class="flex items-center gap-2"><div class="flex text-[#8b5cf6] text-sm gap-0.5" aria-label="5 out of 5 stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="text-[#5b21b6] font-semibold text-sm">5/5</span></div></div></div>
+<div class="flex-1 relative"><svg aria-hidden="true" class="absolute -top-2 right-0 w-9 h-9 text-[#e9d5ff]" fill="currentColor" viewbox="0 0 32 32"><path d="M7.2 21.7c-2.1 0-3.8-1.8-3.8-4 0-4.7 3.1-8.1 8.7-9.8l1.2 2.5c-2.5.9-4 2.2-4.7 4 .4-.2.9-.3 1.5-.3 2 0 3.7 1.6 3.7 3.7s-1.7 3.9-3.8 3.9zm13.4 0c-2.1 0-3.8-1.8-3.8-4 0-4.7 3.1-8.1 8.7-9.8l1.2 2.5c-2.5.9-4 2.2-4.7 4 .4-.2.9-.3 1.5-.3 2 0 3.7 1.6 3.7 3.7s-1.7 3.9-3.8 3.9z"></path></svg><p class="pr-8 text-[#5b21b6] text-base leading-7">The team made the entire process simple, clear, and easy to complete.</p></div>
 </article>
-<article class="tst-slide flex flex-col min-h-[310px] bg-white p-7 md:p-8 rounded-[18px] border border-[#dce7f6] shadow-[0_8px_24px_rgba(11,31,58,0.06)]">
-<div class="flex items-center gap-4 mb-6"><img src="img/whychooseus/awnish.jpeg" alt="Awanis Kumar" class="w-14 h-14 rounded-full object-cover border-2 border-[#bfd8f5]"><div><h3 class="text-lg font-bold text-[#0B1F3A] mb-1">Awanis Kumar</h3><div class="flex items-center gap-2"><div class="flex text-[#0057C8] text-sm gap-0.5" aria-label="5 out of 5 stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="text-[#0B1F3A] font-semibold text-sm">5/5</span></div></div></div>
-<div class="flex-1 relative"><svg aria-hidden="true" class="absolute -top-2 right-0 w-9 h-9 text-[#bfd8f5]" fill="currentColor" viewbox="0 0 32 32"><path d="M7.2 21.7c-2.1 0-3.8-1.8-3.8-4 0-4.7 3.1-8.1 8.7-9.8l1.2 2.5c-2.5.9-4 2.2-4.7 4 .4-.2.9-.3 1.5-.3 2 0 3.7 1.6 3.7 3.7s-1.7 3.9-3.8 3.9zm13.4 0c-2.1 0-3.8-1.8-3.8-4 0-4.7 3.1-8.1 8.7-9.8l1.2 2.5c-2.5.9-4 2.2-4.7 4 .4-.2.9-.3 1.5-.3 2 0 3.7 1.6 3.7 3.7s-1.7 3.9-3.8 3.9z"></path></svg><p class="pr-8 text-[#0B1F3A] text-base leading-7">Professional guidance and quick support helped us move forward with confidence.</p></div>
+<article class="tst-slide flex flex-col min-h-[310px] bg-white p-7 md:p-8 rounded-[18px] border border-[#e9d5ff] shadow-[0_8px_24px_rgba(139,92,246,0.06)]">
+<div class="flex items-center gap-4 mb-6"><img src="img/whychooseus/awnish.jpeg" alt="Awanis Kumar" class="w-14 h-14 rounded-full object-cover border-2 border-[#e9d5ff]"><div><h3 class="text-lg font-bold text-[#5b21b6] mb-1">Awanis Kumar</h3><div class="flex items-center gap-2"><div class="flex text-[#8b5cf6] text-sm gap-0.5" aria-label="5 out of 5 stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="text-[#5b21b6] font-semibold text-sm">5/5</span></div></div></div>
+<div class="flex-1 relative"><svg aria-hidden="true" class="absolute -top-2 right-0 w-9 h-9 text-[#e9d5ff]" fill="currentColor" viewbox="0 0 32 32"><path d="M7.2 21.7c-2.1 0-3.8-1.8-3.8-4 0-4.7 3.1-8.1 8.7-9.8l1.2 2.5c-2.5.9-4 2.2-4.7 4 .4-.2.9-.3 1.5-.3 2 0 3.7 1.6 3.7 3.7s-1.7 3.9-3.8 3.9zm13.4 0c-2.1 0-3.8-1.8-3.8-4 0-4.7 3.1-8.1 8.7-9.8l1.2 2.5c-2.5.9-4 2.2-4.7 4 .4-.2.9-.3 1.5-.3 2 0 3.7 1.6 3.7 3.7s-1.7 3.9-3.8 3.9z"></path></svg><p class="pr-8 text-[#5b21b6] text-base leading-7">Professional guidance and quick support helped us move forward with confidence.</p></div>
 </article>
-<article class="tst-slide flex flex-col min-h-[310px] bg-white p-7 md:p-8 rounded-[18px] border border-[#dce7f6] shadow-[0_8px_24px_rgba(11,31,58,0.06)]">
-<div class="flex items-center gap-4 mb-6"><div class="w-14 h-14 rounded-full bg-[#dceaff] text-[#0057C8] flex items-center justify-center text-lg font-bold border-2 border-[#bfd8f5]" aria-hidden="true">A</div><div><h3 class="text-lg font-bold text-[#0B1F3A] mb-1">Anshu</h3><div class="flex items-center gap-2"><div class="flex text-[#0057C8] text-sm gap-0.5" aria-label="5 out of 5 stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="text-[#0B1F3A] font-semibold text-sm">5/5</span></div></div></div>
-<div class="flex-1 relative"><svg aria-hidden="true" class="absolute -top-2 right-0 w-9 h-9 text-[#bfd8f5]" fill="currentColor" viewbox="0 0 32 32"><path d="M7.2 21.7c-2.1 0-3.8-1.8-3.8-4 0-4.7 3.1-8.1 8.7-9.8l1.2 2.5c-2.5.9-4 2.2-4.7 4 .4-.2.9-.3 1.5-.3 2 0 3.7 1.6 3.7 3.7s-1.7 3.9-3.8 3.9zm13.4 0c-2.1 0-3.8-1.8-3.8-4 0-4.7 3.1-8.1 8.7-9.8l1.2 2.5c-2.5.9-4 2.2-4.7 4 .4-.2.9-.3 1.5-.3 2 0 3.7 1.6 3.7 3.7s-1.7 3.9-3.8 3.9z"></path></svg><p class="pr-8 text-[#0B1F3A] text-base leading-7">Everything was explained clearly, and the service was smooth from start to finish.</p></div>
+<article class="tst-slide flex flex-col min-h-[310px] bg-white p-7 md:p-8 rounded-[18px] border border-[#e9d5ff] shadow-[0_8px_24px_rgba(139,92,246,0.06)]">
+<div class="flex items-center gap-4 mb-6"><div class="w-14 h-14 rounded-full bg-[#f3e8ff] text-[#8b5cf6] flex items-center justify-center text-lg font-bold border-2 border-[#e9d5ff]" aria-hidden="true">A</div><div><h3 class="text-lg font-bold text-[#5b21b6] mb-1">Anshu</h3><div class="flex items-center gap-2"><div class="flex text-[#8b5cf6] text-sm gap-0.5" aria-label="5 out of 5 stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><span class="text-[#5b21b6] font-semibold text-sm">5/5</span></div></div></div>
+<div class="flex-1 relative"><svg aria-hidden="true" class="absolute -top-2 right-0 w-9 h-9 text-[#e9d5ff]" fill="currentColor" viewbox="0 0 32 32"><path d="M7.2 21.7c-2.1 0-3.8-1.8-3.8-4 0-4.7 3.1-8.1 8.7-9.8l1.2 2.5c-2.5.9-4 2.2-4.7 4 .4-.2.9-.3 1.5-.3 2 0 3.7 1.6 3.7 3.7s-1.7 3.9-3.8 3.9zm13.4 0c-2.1 0-3.8-1.8-3.8-4 0-4.7 3.1-8.1 8.7-9.8l1.2 2.5c-2.5.9-4 2.2-4.7 4 .4-.2.9-.3 1.5-.3 2 0 3.7 1.6 3.7 3.7s-1.7 3.9-3.8 3.9z"></path></svg><p class="pr-8 text-[#5b21b6] text-base leading-7">Everything was explained clearly, and the service was smooth from start to finish.</p></div>
 </article>
 </div>
 </div>
@@ -922,14 +922,14 @@
 </a>
 <!-- END: Floating WhatsApp Button -->
 <!-- BEGIN: Floating AI Assistant (left) -->
-<button aria-controls="aiPanel" aria-expanded="false" aria-label="Open AI assistant" class="ai-fab fixed bottom-6 left-6 z-40 flex items-center gap-2 rounded-full bg-[#063B8F] text-white pl-2 pr-4 h-14 transition-transform duration-300 hover:scale-105" id="aiToggle" type="button">
+<button aria-controls="aiPanel" aria-expanded="false" aria-label="Open AI assistant" class="ai-fab fixed bottom-6 left-6 z-40 flex items-center gap-2 rounded-full bg-[#8b5cf6] text-white pl-2 pr-4 h-14 transition-transform duration-300 hover:scale-105 shadow-[0_10px_26px_-8px_rgba(139,92,246,0.5)]" id="aiToggle" type="button">
 <span class="flex items-center justify-center w-10 h-10 rounded-full bg-brand-orange flex-shrink-0">
 <svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2l1.9 4.6L18.5 8.5 13.9 10.4 12 15l-1.9-4.6L5.5 8.5l4.6-1.9L12 2zm7 10l1 2.4 2.4 1-2.4 1-1 2.4-1-2.4-2.4-1 2.4-1 1-2.4zM5 13l.9 2.1L8 16l-2.1.9L5 19l-.9-2.1L2 16l2.1-.9L5 13z"></path></svg>
 </span>
 <span class="font-semibold text-sm">Ask AI</span>
 </button>
 <div aria-labelledby="aiPanelTitle" aria-modal="false" class="fixed bottom-24 left-6 z-[45] w-[calc(100vw-3rem)] max-w-sm bg-white rounded-2xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden" id="aiPanel" role="dialog">
-<div class="flex items-center justify-between bg-brand-navy text-white px-4 py-3">
+<div class="flex items-center justify-between bg-brand-purple text-white px-4 py-3">
 <div class="flex items-center gap-2">
 <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-orange flex-shrink-0">
 <svg class="h-4 w-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2l1.9 4.6L18.5 8.5 13.9 10.4 12 15l-1.9-4.6L5.5 8.5l4.6-1.9L12 2z"></path></svg>
@@ -963,7 +963,7 @@
 <button aria-label="Back to top" id="toTop" type="button">
 <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M18 15l-6-6-6 6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </button>
-<footer class="bg-[#123fbd] text-white pt-20 pb-8">
+<footer class="bg-[#4c1d95] text-white pt-20 pb-8">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <!-- Virtual Office Cities -->
 <div class="border-t border-white/10 border-b border-white/10 py-8 mb-12">
